@@ -1,0 +1,52 @@
+@media (max-width: 1280px) {
+  .section04 {
+    width: 100%;
+    height: 435px;
+    /* width 100%를 안 주면 네비게이션이 화면을 넘어감 */
+  }
+  .section04-inner {
+    /* lib area 요소들을 세로로 줄 세우기 */
+    flex-direction: column;
+    flex: 1; /* 도서관 구분선이 바닥을 다 채우게(안하면 좌우 여백이 좀 남는다) */
+  }
+  .lib-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* lib area 안에 있는 요소(text container)를 가로로 정렬되게 한다. 그리고 가운데 정렬한다.*/
+    border-left: none;
+    border-right: none; /* 반응형 전에 있었던, 보더 레프트와 라이트에 있는 하얀 선을 none으로 바꾼다 */
+    border-bottom: 1px solid #fff; /* 그리고 보더 바텀을 주어서 경계선을 만든다. 맨 마지막 하얀 선은 lib area크기의 총 합이 컨테이너의 총 높이에 비해 2px 못 미쳐서 보이지 않는다. */
+    cursor: pointer;
+    /* 반응형이 됐을 때 a버튼(자세히보기)이 없어지기 때문에 lib-area를 선택하면 자세히 보기 버튼의 링크로 넘어가게 하는 효과가 있다는 걸 알리기 위해, cursor를 pointer로 설정해
+    클릭을 유도한다. */
+  }
+
+  .lib-text-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* 텍스트 컨테이너 내부에서 가로로 정렬이 되게하고, 각 아이템들을 가운데 정렬한다. */
+  }
+  .lib-text-container > h4,
+  .lib-text-container > p {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    /* h4와 p가 text-container내에서 영역을 각각 나눠서 모두 채우게 함 */
+  }
+  .lib-text-container > p {
+    width: 120px;
+    /* p태그의 width를 지정해 p태그 안에 있는 글자가 박스를 넘어가서 줄이 바뀌지 않게 한다. */
+  }
+  .lib-text-container > a {
+    display: none;
+    line-height: 0;
+    /* a태그를 없애고 line height를 없애서 text container에 영향을 미치지 않게 한다. */
+  }
+}

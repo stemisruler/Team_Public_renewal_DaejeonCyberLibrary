@@ -1,0 +1,79 @@
+.contents-inner{
+  height: 650px;
+  display: flex;
+  justify-content: space-between;
+}
+/* 머리부분 */
+.content-head{width: 100%;}
+.content-head .current-login{text-align: right;}
+.content-head .login-head-box{margin-top: 25px;}
+.content-head .login-head-box p{
+  position: relative;
+  font-size: var(--h5-size);
+}
+.content-head .login-head-box p::before{
+  content: '';
+  position: absolute;
+  width: 25px; height: 36px;
+  background: url(../../img/point-color-image.png)no-repeat center center;
+  background-size: cover;
+  top: -75%;
+  left: -14px;
+}
+.content-head .login-head-box span{font-size: var(--p-size);}
+/* 중앙 컨텐츠 */
+.content-main{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+/* 왼쪽부분 */
+.content-main .left-main {}
+.content-main .left-main span{}
+/* 로그인과 비밀번호 */
+.content-main .left-main{}
+.content-main .left-main .login-box{
+  display: flex; flex-direction: column; margin-top: 26px; } 
+.content-main .left-main .login-box input[type="email"]{margin-bottom: 14px;}
+.content-main .left-main .login-box input[type="email"],input[type="password"]{
+  width: 428px; height: 41px; border-radius: 0;
+  background-color: white; border: 1px solid #6C6C6C;
+}
+.content-main .left-main .login-box input[type="submit"]{
+  width: 429px; height: 41px; background-color: #E4842B;
+  color: white; cursor: pointer;
+}
+/* 아이디 기억 체크박스 */
+.content-main .left-main .login-box input[type="checkbox"]{margin: 13px 0;}
+.content-main .left-main .login-box input[type="checkbox"] + label{}
+/* 아이디 비번 회원가입 */
+.search-login{margin-top: 15px;}
+.search-login ul{
+  display: flex; gap: 20px; 
+  justify-content: center;
+  transform: translateX(-5px);
+}
+.search-login ul li{position: relative;}
+.search-login ul li:nth-child(-n+2)::after{
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 13px;
+  background-color: black;
+  top: 2px;
+  right: -11px;
+}
+/* 오른쪽부분 */
+.content-main .right-main{  background-color: white;}
+.content-main .right-main .cat-img{
+  transform: translateY(35px);
+  width: 494px; height: 190px;
+  background: url(../../img/sub-page/login/고양이.svg) no-repeat center center;
+  background-size: cover;
+
+}
+/* 하단 컨텐츠 */
+.content-desc{ background-color: white; margin-top: 14px;}
+.content-desc p{color: #6C6C6C;}
+.content-desc p:first-child{margin-bottom: 10px;}
+.content-desc p a{text-decoration: underline;color: #6C6C6C;}

@@ -1,0 +1,214 @@
+
+.contents{
+    overflow: hidden;
+}
+.contents-inner{ 
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.9);
+
+} 
+
+.contents-background-img-up{
+    position: absolute;
+    top : -246px;
+    z-index: -5;
+  }
+
+  .title-box{
+    display: flex;
+    align-items: center;
+  }
+
+.current-sign-up{
+    float: right;
+}
+
+.share-and-print button{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    bottom: 7px;
+    background-color: transparent;
+    cursor: pointer;
+
+  }
+
+  .share-and-print button:first-child{
+    padding: 0 3px 0 0;
+
+  }
+  .share-and-print button:hover{
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  .share-and-print button:first-child{
+    right: -100px;
+  }
+
+  .share-and-print button:last-child{
+    right: -150px;
+  }
+
+  
+/************ 제목 및 리스트  *************/
+.sign-up-head-box{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0 44px 0;
+    position: relative;
+}
+.sign-up-head-box::before{
+    position: absolute;
+    content: '';
+    right: -167px;
+    bottom: 0;
+    width: 115%;
+    height: 2px;
+    background-color: #D9D9D9;
+    
+}
+.sign-up-head-box > h4{
+    font-family: 'Pretendard';
+    font-size: var(--h4-size);
+    font-weight: 500;
+    margin-top: 1rem;
+
+}
+h5{
+    padding-left: 0.5rem;
+}
+/* 회원가입, 로그인 버튼 */
+.sign-up-login-buttons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    gap: 1rem;
+    margin: 3rem auto;
+}
+.sign-up-button,
+.log-in-button{
+    width: 142px;
+    height: 46px;
+    line-height: 46px;
+    border: none;
+    font-size: var(--p-size);
+    font-weight: 600;
+    color: white;
+    transition: 0.5s;
+}
+.sign-up-button:hover,
+.log-in-button:hover{
+    background-color: var(--tree-color);
+
+}
+.sign-up-button{
+    background-color: #704214;
+}
+
+.log-in-button{
+    background-color: #E4842B;
+}
+
+.sign-up-contents > .title-box{
+    margin: 1.2rem;
+}
+
+.sign-up-contents h5{
+    font-size: var(--h5-size);
+}
+
+.sign-up-contents{
+}
+.sign-up-contents ul{
+    list-style-type: initial;
+
+}
+
+.sign-up-contents ul li{
+    list-style-type: initial;
+    list-style-position: inside;
+    padding-left: 2rem;
+    line-height: 1.3rem;
+}
+.sign-up-contents ol{
+
+}
+.sign-up-contents ol>li{
+    list-style-type:decimal;
+    list-style-position: inside;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3rem;
+}
+
+.footer{
+    margin-top: 2rem;
+}
+
+/**************** 과정 박스 css *********************/
+.process-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+.process-wrap .process-box {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    padding-top: 35px;
+    width: 168px;
+    height: 112px;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 85px;
+    font-weight: 500;
+    font-size: 17px;
+    color: #2d2d2d;
+    background-color: #fff;
+}
+
+.process-wrap .process-box .process-num {
+display: inline-block;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 35px;
+line-height: 35px;
+color: #fff;
+background-color: #E4842B;
+}
+.process-wrap .process-box .process-content {
+display: flex;
+height: 78px;
+align-items: center;
+justify-content: center;
+font-size: 14px;
+}
+
+.process-wrap .process-arrow {
+display: inline-block;
+position: relative;
+width: 52px;
+height: 112px;
+vertical-align: middle;
+}
+
+.process-wrap .process-arrow:after {
+display: block;
+content: "";
+position: absolute;
+left: 50%;
+top: 50%;
+width: 22px;
+height: 33px;
+transform: translate(-50%, -50%);
+background: url(../../img/sub-page/sign-up/arr_process.png) 0 0 no-repeat;
+}
+

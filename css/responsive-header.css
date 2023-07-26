@@ -1,0 +1,119 @@
+@media screen and (max-width : 1280px){
+  body{overflow-x: hidden;}
+  header{height: 70px;}
+  .header-inner{
+      width: 100%;
+      margin : auto;
+  }
+  /* 데스크톱 gnb */
+  .header-gnb{
+      display: none;
+  }
+  /* login 모바일용 햄버거 on */
+  .header-login>.desktop-ham{display: none;}
+  header .header-inner .header-login>.hamburger{display: block;}
+  /* 모바일용 GNB ON */
+  .responsive-gnb{
+      
+      display: block; position: absolute;
+      top: 0px;
+      right:0px;
+      height: 1500px;
+      width:0vw;
+      background: white;
+  }
+  .res-inner{
+      width: 100vw;
+      margin: auto;
+      height: inherit;
+  }
+  /* icon부분 */
+  .res-head{
+      display: flex;
+      align-items: center;
+      height: 70px;
+      background-color: var(--header-color);
+  }
+  .res-icon{
+      margin-left: auto;
+      font-size: 30px;
+  }
+  .res-icon>a{
+      padding: 1.2rem .8rem;
+      text-align: center;
+      color: white;
+  }
+  .res-icon>a:last-child{margin-right: 20px;}
+  /* list 부분. 아코디언 */
+  .res-desc {
+      display: flex;
+      width: 100vw;
+    }
+    
+    .res-desc > ul>li {border-bottom: 1px solid #D9D9D9;}
+    .res-desc > ul > li > .collapsible {
+      display: block;
+      width: 100vw;
+      height: 60px;
+      line-height: 60px;
+      font-size: var(--h5-size);
+      background-color: white;
+      padding-left: 3rem;
+      cursor: pointer;
+    }
+    
+    .res-desc > ul > li > .content-sub {
+      display: none;
+      width: 100vw;
+      overflow: hidden;
+      transition: height 0.2s ease-out;
+      background-color: #F3F3F3;
+    }
+    
+    .res-desc > ul > li > .content-sub.open {
+      display: block;
+
+    } 
+    .res-desc > ul > li > .content-sub > .coi {
+      display: flex;
+      flex-direction: column;
+      line-height: 2.1;
+
+    }
+    .res-desc > ul > li > .content-sub .coi1{
+      height: 400px;
+    }
+    .res-desc > ul > li > .content-sub .coi2{
+      height: 280px;
+    }
+    .res-desc > ul > li > .content-sub .coi3{
+      height: 340px;
+    }
+    .res-desc > ul > li > .content-sub .coi4{
+      height: 280px;
+    }
+    .res-desc > ul > li > .content-sub > .coi > .sub {
+      text-align: left;
+      width: 100vw;
+    }
+    
+    .res-desc > ul > li > .content-sub > .coi > .sub > li {
+      font-size: 20px;
+    }
+    
+    .res-desc > ul > li > .content-sub > .coi > .sub > li > a {
+      display: block;
+      padding: .8rem 0;
+      padding-left: 5rem;
+      color: black;
+      text-decoration: none;
+    }
+    /* 호버 */
+    .res-desc > ul > li > .content-sub > .coi > .sub > li > a:hover{color: var(--header-color);}
+}
+@media screen and (max-width : 600px){
+  header .header-inner .header-login>a:nth-child(-n+2){
+    display: none;
+    padding: 1.2rem 1.2rem;
+  }
+}

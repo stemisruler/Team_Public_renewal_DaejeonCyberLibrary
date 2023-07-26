@@ -1,0 +1,65 @@
+.contents{
+  padding-top : 33px;
+  position: relative;
+  overflow: hidden;
+}
+.contents-background-img-up{
+  position: absolute;
+  top : -36%;
+  z-index: -5;
+}
+.contents-background-img-down{
+  position: absolute;
+  bottom : -40%;
+  z-index: -6;
+}
+.contents-background-img-right{
+  position: absolute;
+  top : -10%;
+  right : -5%;
+  z-index: -4;
+}
+/* .contents-inner{ 각 작업시 여기부분을 가져가서 따로 작업 해주세요 
+  height: 650px;
+  display: flex;
+  justify-content: space-between;
+} */
+/* sub-content 내용 */
+.sub-content{
+  width: 1000px; height: 90%;
+}
+/* lnb */
+.contents-inner .lnb{width: 250px; height: 90%;}
+.contents-inner .lnb span{
+  display: block;
+  width: 100%; height: 120px;
+  background-color: var(--header-color);
+  text-align: center;
+  font-size: var(--h4-size);
+  color: white;
+  font-weight: bold;
+  line-height: 120px;
+  margin-bottom: 20px;
+}
+.contents-inner .lnb ul{}
+.contents-inner .lnb ul li{
+  width: 100%; height: 70px;
+  border: 1px solid #EEEEEE;
+  text-align: left;
+  line-height: 70px;
+  overflow: hidden;
+}
+.contents-inner .lnb ul li:nth-child(n+2){
+  border-top: none;
+}
+.contents-inner .lnb ul li a{
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  background-color: white;
+  font-size: 20px;
+}
+.contents-inner .lnb ul li.current-page a{
+  background-color: var(--point-color);
+  font-weight: bold;
+}

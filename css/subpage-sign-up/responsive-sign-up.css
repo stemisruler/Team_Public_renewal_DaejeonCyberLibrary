@@ -1,0 +1,95 @@
+@media (max-width: 1280px){
+    .inner{width: 100%;}
+        
+    .sub-content{
+        width: 75%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1020px){
+
+    .sign-up-head-box::before, .current-sign-up span, .contents-inner .lnb, .contents-background-img-up{display: none;}
+    .contents-inner{
+        height: fit-content;
+    }
+
+    .sub-content{
+        width: 90%;
+    }
+
+    .sign-up-head-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .sign-up-head-box h4{
+        font-size: var(--h3-size);
+    }
+    .process-wrap .process-box .process-content{
+        font-size: 18px;
+    }
+    
+    ol li{
+        font-size: 17px;
+    }
+    ol li:first-child{
+        padding-top: 10px;
+    }
+    ul li{
+        font-size: 15px;
+    }
+    .sign-up-contents ul li{
+        width: 97%;
+        padding-left: 0.3rem;
+    }
+    .sign-up-contents ol>li{
+        width: 97%;
+        padding-left: 0.3rem;
+    }
+    .sign-up-button,
+    .log-in-button{
+        width: 43%;
+        height: 46px;
+        line-height: 46px;
+        border: none;
+        font-size: var(--p-size);
+        font-weight: 600;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .process-wrap{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+
+    .process-wrap .process-box {
+    margin-top: 0;
+    }
+    .process-wrap .process-box {
+    width: 80%;
+    }
+    .process-wrap .process-arrow {
+    width: 355px;
+    height: 50px;
+    }
+    .process-content{
+        line-height: 78px;
+    
+    }
+    
+    .process-wrap .process-arrow:after {
+    top: 9px;
+    transform: translateX(-50%) rotate(90deg);
+    }
+    .sign-up-contents>ul>li:first-child,
+    .margin-bottom
+    {
+        margin-bottom: 1rem;
+    }
+}

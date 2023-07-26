@@ -1,0 +1,89 @@
+header{width: 100%; background: rgba(0,89,80,0.31); height: 77px; position: absolute; z-index: 100; transition: .4s;}
+header .header-inner{height: inherit; 
+  display: flex; justify-content: space-between; 
+  align-items: center; position:relative;}
+/* logo */
+header .header-inner .header-logo{margin-left: .8rem; margin-top: .5rem;}
+header .header-inner .header-logo>a{
+  width: 210px; height: 73px; 
+}
+header .header-inner .header-logo>a>img{
+  width: inherit; height: inherit; margin-left: 20px;
+}/* 로고이미지에 있는 글자를 좀더 키우기. 이것만하면 끗 */
+/* gnb */
+header .header-inner .header-gnb{z-index: 100;}
+header .header-inner .header-gnb .menu{display: flex; justify-content: space-between; width: 700px; }
+header .header-inner .header-gnb .menu>li{text-align: center; flex: 1;  position:relative;}
+header .header-inner .header-gnb .menu>li>a{
+  display: block;
+  padding: 1.7rem 2.1rem;
+  color: white;
+  font-size: var(--h5-size);
+  font-weight: 500;
+}
+/* sub-menu */
+.sub-menu{
+  width: 0px; height:0px;
+  position: absolute; 
+  top: 99%;
+  left: 0; 
+  background-color: none;
+  transition: .4s;
+  z-index: 100;
+}
+.sub-menu-inner{
+  width: 175px; height:0px;
+  z-index: 100; position: absolute; 
+  line-height: 2.1;
+}
+.sub-menu-inner>ul{margin-top: 8px;overflow: hidden; height: 0px;transition: .4s;}
+.sub-menu-inner>ul>li{position: relative;}
+.sub-menu-inner>ul>li::before{
+  content: '';
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  width: 0; height: 2px;
+  background-color: var(--header-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+.sub-menu-inner>ul>li>a{
+  color: white; font-size: var(--p-size);  
+  display: block;
+}
+/* 서브메뉴 호버 */
+.menu>li:hover .sub-menu{ width: 175px; background-color: var(--point-color); }
+.menu>li:hover .sub-menu-inner>ul>li>a, .sub-menu:hover .sub-menu-inner>ul>li>a{color: black;}
+.sub-menu-inner>ul>li:hover::before{width: 130px; }
+
+/* 서브메뉴 뒷배경 */
+.sub-menu-bg{
+  width: 100%;
+  height: 0px;
+  z-index: 99;
+  position: absolute;
+  background-color: var(--header-color);
+  top: 77px;
+  left: 0;
+  transition: .4s;
+}
+/* login icon */
+header .header-inner .header-login{display: flex;
+  justify-content: center;}
+header .header-inner .header-login>a{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 1.8rem;
+  transition: .4s;
+}
+header .header-inner .header-login>.hamburger{
+  display: none;
+}
+/* icon 호버 */
+header .header-inner .header-login>a:hover{color: var(--point-color);}
+/* responsive gnb */
+.responsive-gnb{display: none; overflow-x: hidden;}

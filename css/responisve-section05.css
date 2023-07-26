@@ -1,0 +1,49 @@
+@media (max-width: 1280px) {
+  /* 화면 크기 1280px부터 다른 섹션의 화면이 반응형으로 조금 바뀐다. 또, 배너 슬라이드가 뭉개지는 현상을 방지하기 위해 1280px를 기준으로 반응형 코드를 설정 */
+
+  /* inner를 90%로 변경해 다른 섹션과의 반응형 inner크기를 맞춘다. */
+  .section05-inner {
+    width: 90%;
+  }
+
+  /* 슬라이더와 슬라이더를 둘러싼 부모들을 반응형을 위해 모두 %로 크기를 리셋*/
+  .section05,
+  .banner-swiper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .banner-swiper-button-next::after,
+  .banner-swiper-button-prev::after {
+    display: none;
+  }
+  .banner-swiper .swiper-slide {
+    width: auto;
+  }
+  .banner-swiper .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  .banner-swiper-slide > a::after {
+    content: "";
+    position: absolute;
+    left: 1%;
+    top: 0%;
+    width: 98%; /* 반응형에서 500px로 줄어들었을 때 box shadow 왼쪽 shadow가 짤려서 짤리는 현상을 없애기 위해 left를 1% 주고 width를 98%로 조정했다. */
+    height: 100%;
+    transition: ease-in-out 0.3s;
+  }
+
+  .banner-swiper-slide:hover a::after {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 900px) {
+  .banner-swiper-button-next,
+  .banner-swiper-button-prev {
+    display: none;
+  }
+
+  /* 900px부터 버튼 next와 prev를 제거 */
+}

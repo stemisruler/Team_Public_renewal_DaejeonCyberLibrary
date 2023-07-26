@@ -1,0 +1,328 @@
+.contents-inner{
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.9);
+}
+.contents-background-img-up{
+  position: absolute;
+  top : -246px;
+  z-index: -5;
+}
+.contents-background-img-down{
+  position: absolute;
+  bottom : -280px;
+  z-index: -6;
+}
+.contents-background-img-right{
+  position: absolute;
+  top : -10%;
+  right : -5%;
+  z-index: -4;
+}
+button{
+  background-color: transparent;
+  cursor: pointer;
+}
+.sub-content{
+  width: 100%;
+  margin-left: 30px;
+}
+.notice-name{
+  height: 120px;
+  position: relative;
+}
+.notice-name::before{
+  position: absolute;
+  content: "";
+  bottom: -21px;
+  right: 0%;
+  width: 122.4%;
+  height: 1px;
+  background-color: #D9D9D9;
+  box-sizing: border-box;
+}
+.mini-nav{
+  padding-right: 12px;
+}
+.mini-nav ul{
+  display: flex;
+  float: right;
+}
+.notice-main-name{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+}
+.notice-main-name h2{
+  font-size: var(--h2-size);
+  position: relative;
+}
+.notice-main-name h2::before{
+  background-image: url("../../img/point-color-stick.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  content : "";
+  width: 30px;
+  height: 30px;
+  top : -12%;
+  left : -8%;
+}
+.notice-main-name h2::after{
+  background-image: url("../../img/point-color-stick2.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  content : "";
+  width: 30px;
+  height: 30px;
+  top : -38%;
+  left : -8%;
+}
+.share-and-print{
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  padding-right: 12px;
+
+  position: absolute;
+  bottom : 0%;
+  right: 0%;
+}
+.share-and-print button{
+  width: 45px;
+  height: 45px;
+  margin-left: 20px;
+  border-radius: 50%;
+}
+.share-and-print button:nth-child(1)>i{
+  padding-right:3px;
+  padding-top:3px;
+}
+.share-and-print button:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+.search-wrap{
+  display: flex;
+  align-items: center;
+  margin-top : 20px;
+  border: 1px solid #D9D9D9;
+  border-top: 0px;
+  width: 100%;
+  justify-content: right;
+  height: 100px;
+  box-sizing: border-box;
+}
+.library-select{
+  width: 15%;
+  text-align: center;
+  /* padding-left: 15px; */
+  font-size : 1rem;
+  border: 0px;
+}
+  .library-select:focus{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,0.3);
+  }
+
+.notice-target{
+  width: 10%;
+  margin : 0px 2.5%;
+  text-align: center;
+  font-size : 1rem;
+  border: 0px;
+}
+  .notice-target:focus{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,0.3);
+  }
+.notice-search-wrap{
+  display: flex;
+  margin-right: 40px;
+  width: 50%;
+
+  position: relative;
+}
+.notice-search-wrap input{
+  background-color: white;
+  padding-left: 1rem;
+  padding-right: 70px;
+  border-radius: 0px;
+  font-size : 1rem;
+}
+
+/* 입력전 알려주는 문구 placeholder */
+.notice-search-wrap input::placeholder{
+  color : #D9D9D9;
+  text-align: center;
+}
+/* 클릭했을 때 */
+  .notice-search-wrap input:focus{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0,0.3);
+  }
+.notice-search-wrap button{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70px;
+  height: 34px;
+
+  position: absolute;
+  right: 0%;
+}
+
+.notice-ul-wrap{
+  margin-top : 50px; 
+}
+
+.upper-ul{
+  width: 100%;
+  display: flex;
+}
+.upper-ul a{
+  border: 0px;
+  font-weight: normal;
+}
+.upper-li{
+  display: block;
+  font-size: var(--h5-size);
+  box-sizing: border-box;
+  border-right: 1px solid #EEE;
+  width: 100%;
+}
+.upper-li:nth-of-type(1){
+  border-left: 1px solid #EEE;
+  width: 9%;
+}
+.upper-li:nth-of-type(2){
+  width : 50%;
+}
+.upper-li:nth-of-type(3){
+  width: 17%;
+}
+.upper-li:nth-of-type(4){
+  width: 15%;
+}
+.upper-li:nth-of-type(5){
+  width: 9%;
+}
+
+.lower-li-name{}
+
+
+.lower-li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #EEE;
+}
+
+.li-name{
+  font-weight: bold;
+  background-color: #FEFEFE;
+  border-top : 2px solid #EEE;
+}
+
+.library-ul .library-point-color{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 67%;
+  height: 50%;
+  background-color: var(--point-color2);
+  color : white;
+  border-radius: 8px;
+}
+
+.library-notice .library-point-color{
+  background-color: #FF7D34;
+}
+.library-all .library-point-color{
+  background-color: var(--point-color2);
+}
+.library-hanbat .library-point-color{
+  background-color: #6BDC12;
+}
+.library-gayang .library-point-color{
+  background-color: #D3A66C;
+}
+.library-ganggyong .library-point-color{
+  background-color: #47BBFF
+}
+.library-seogu .library-point-color{
+  background-color: #FF584E;
+}
+.library-galma .library-point-color{
+  background-color: #5F7FF1;
+}
+.library-guam .library-point-color{
+  background-color: #EB66DE;
+}
+.notice-text-ul .lower-li.li-name{
+  width: 100%;
+  padding: 0%;
+  margin : 0%;
+  display: flex;
+  justify-content: center;
+}
+.notice-text-ul .lower-li{
+  padding: 0px 1rem;
+  display: block;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 70px;
+}
+
+
+.notice-attachment .lower-li{
+  display: flex;
+}
+
+.notice-attachment .lower-li a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.notice-attachment .lower-li a{
+  display: none;
+}
+.notice-attachment .lower-li.attachment a{
+  display: flex;
+}
+.notice-attachment .lower-li a i{
+  transform: rotate(-45deg);
+}
+
+.pagination-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66%;
+  margin : 100px auto 200px auto;
+}
+.pagination-wrap a{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right : 5px;
+  border: 1px solid #EEE;
+  font-size : var(--p-size);
+  box-sizing: border-box;
+}
+
+.pagination-wrap a i{
+  font-size: 2rem;
+}
+.pagination-wrap a.current-page-in-notice{
+  background-color: var(--point-color2);
+  color : white;
+}
+.pagination-wrap div:last-child{
+  margin-right: 0px;
+}

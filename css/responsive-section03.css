@@ -1,0 +1,170 @@
+@media screen and (max-width : 1280px) {
+    .inner{
+        width: 90%;
+        margin : auto;
+    }
+    .section3-inner{
+        height: 100%;
+    }
+    .how-to{
+        height: 550px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        
+    }
+    .how-to-box{
+        height: 100%;
+    }
+    .how-to-name{
+        margin-top : 20px; 
+    }
+    /* .how-to-contents{
+        border : 1px solid red;
+        display: grid;
+        position: absolute;
+        grid-template-columns: repeat( 5, 1fr);
+        grid-template-rows: auto auto;
+        height: 90%;
+        padding-top : 5%;
+    } */
+    .contents{
+        /* media 사이즈에 따라 점점 작아지도록 */
+        /* clamp(최소 , 지정값 , 최대) */
+        width: clamp(210px,25%,250px);
+        padding-bottom: clamp(210px,25%,250px);
+        position: absolute;
+    }
+    
+    .first-contents,
+    .third-contents{
+        /* grid-row : 2/3; */
+        margin-bottom : 2rem;
+    }
+    .first-contents:hover,
+    .third-contents:hover{
+        margin-bottom : calc( 30px + 2rem);
+    }
+    
+    /* .second-contents,
+    .forth-contents{
+        grid-row : 1/2;
+    } */
+    .first-contents{
+        /* grid-column: 1/3; */
+        left : 0%;
+        bottom : 0%;
+    }
+    .second-contents{
+        /* grid-column: 2/4; */
+        left : 25%;
+        top:10%;
+    }
+    .third-contents{
+        /* grid-column: 3/5; */
+        left : 50%;
+        bottom : 0%;
+    }
+    .forth-contents{
+        /* grid-column: 4/6; */
+        left: 75%;
+        top:10%;
+    }
+    .first-contents::before,
+    .third-contents::before{
+        height: 100%;
+        border-radius: 0 0 50% 50%;
+    }
+    .first-contents::after,
+    .third-contents::after{
+        border-radius: 50% 50% 0 0;
+    }
+    
+    .second-contents::before,
+    .forth-contents::before{
+        height: 100%;
+        border-radius: 50% 50% 0 0;
+    }
+    .second-contents::after,
+    .forth-contents::after{
+        border-radius: 0 0 50% 50%;
+    }
+}
+/* media css 하나로는 how-to 의 contents부분이 망가져서 여러개사용 */
+@media screen and (max-width : 824px) {
+    .how-to{
+        height: 400px;
+        background-size: 200%;
+        background-position: bottom;
+    }
+    .contents{
+        /* clamp(최소 , 지정값 , 최대) */
+        width: clamp(165px,20%,210px);
+        padding-bottom: clamp(165px,20%,210px);
+        position: absolute;
+    }
+    .contents h3{
+        font-size: var(--h4-size);
+    }
+    .how-to-contents .contents p{
+        font-size: var(--body-size);
+    }
+}
+
+@media screen and (max-width : 660px) {
+    .how-to{
+        height: 400px;
+        background-size: 300%;
+        background-position: left bottom;
+    }
+    .contents{
+        /* clamp(최소 , 지정값 , 최대) */
+        width: clamp(150px,20%,210px);
+
+        padding-bottom: clamp(150px,20%,210px);
+        position: absolute;
+        z-index: 2;
+        transform: translate(-13%);
+    }
+
+    .first-contents:hover,
+    .third-contents:hover{
+        margin-bottom : 3rem;
+    }
+    .second-contents,
+    .forth-contents{
+        box-shadow: 0 0 10px var(--how-to-point-color2);
+        margin-top : 3rem;
+    }
+    .second-contents:hover,
+    .forth-contents:hover{
+         margin-top : 2rem;
+    }
+    .contents a h3{
+        font-size: var(--h5-size);
+        margin-bottom : 1.5rem;
+    }
+    .how-to-contents .contents p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .how-to-contents{
+        width: 90%;
+        margin-left : 4px;
+    }
+    .contents{
+        /* clamp(최소 , 지정값 , 최대) */
+        width: clamp(00px,45%,150px);
+        padding-bottom: clamp(00px,45%,150px);
+        transform: translate(-13%);
+    }
+    .contents a h3{
+        font-size: var(--p-size);
+        margin-bottom : 1.0rem;
+    }
+    .how-to-contents .contents p{
+        font-size: 0.7rem;
+    }
+}

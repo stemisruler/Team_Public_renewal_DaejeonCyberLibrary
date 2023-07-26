@@ -1,0 +1,95 @@
+.visual{height: 660px;position: relative}
+/* visual background img */
+.visual-bg{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;}
+.visual-bg>ul>li>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+/* active class 추가 */
+.visual-bg.visual-bg>ul>li>img.active{opacity: 1;}
+/* visual 본문 */
+.visual-inner{height: 562px; display: flex; 
+  justify-content: center;
+  align-items: center; flex-direction: column; 
+  position: relative; z-index: 90; transition: .4s;}
+/* 통합검색 */
+.search{transform: translateY(16px);}
+.search .search-bar{}
+.search .search-bar input[type="text"]{
+  width: 670px; height: 60px; border-radius: 35px;
+  border: 5px solid var(--point-color);
+  background-color: rgba(180, 180, 180, 0.5);
+  font-size: 28px;
+  color: var(--point-color);
+  transition: .2s;
+}
+.search .search-bar input::placeholder{
+  color: var(--point-color); font-size: 28px; font-weight: bold;  
+  padding-left: 10px; transition: .2s;
+}
+.search .search-bar input[type="submit"]{
+  position: absolute; 
+  right: 5%;
+  top: 30%;
+  background: url(../img/visual-img/iconamoon_search-bold.png) no-repeat center;
+  background-size: cover;
+  font-size: 0;
+  width: 30px; height: 30px; transition: .2s;
+}
+/* 자주찾는 메뉴 */
+.quick-menu{position: absolute; bottom: -71px; width: 100%;}
+.quick-menu .quick-menu-inner{width: 100%; height: 144px;background-color: var(--tree-color); display: flex; background: url(../img/visual-img/Untitled-3\ copy.png); border-radius: 20px;}
+.quick-menu .quick-menu-inner ul
+{ width: inherit;
+  display: flex;align-items:center;
+  justify-content: space-around; text-align: center; color: var(--white-color);
+}
+.quick-menu .quick-menu-inner ul span{font-size: var(--h5-size); font-weight: 600; z-index: 50;}
+.quick-menu .quick-menu-inner ul span:first-child:after{
+  content: '';
+  position: absolute;
+  width: 11%; height: 2px;
+  background-color: #F9AE1D;
+  bottom: 53px;
+  /* left: 42px;  */
+  left: 3%;
+}
+.quick-menu .quick-menu-inner ul .check{
+  position: absolute;
+  width: 32px; height: 24px;
+  background: url(../img/visual-img/check.svg)no-repeat center center;
+  background-size: cover;
+  top: 46px;
+  left:33px; z-index: 49;
+}
+/* hover했을때 figma에서 정한것처럼 아이콘 위에 노란점이 같이 움직이는 js를 따로 만들어야함. 시간이 촉박하기에 나중에 만들기로함. */
+.quick-menu .quick-menu-inner ul li a p{transition: .3s;}
+.quick-menu .quick-menu-inner ul li a{color: var(--white-color); font-size: var(--p-size); }
+.quick-menu .quick-menu-inner ul li a .quick-img{
+  width: 80px; height: 80px; transition: .3s;
+  background: url(../img/visual-img/visual-icon2.png)no-repeat center center;} 
+.quick-menu .quick-menu-inner ul li a .img1{background-position: -30px -30px;}
+.quick-menu .quick-menu-inner ul li a .img2{background-position: -119px -30px; margin-right: 5px;}
+.quick-menu .quick-menu-inner ul li a .img3{background-position: -208px -30px;}
+.quick-menu .quick-menu-inner ul li a .img4{background-position: -296px -30px;}
+.quick-menu .quick-menu-inner ul li a .img5{background-position: -385px -30px;}
+.quick-menu .quick-menu-inner ul li a .img6{background-position: -479px -30px;}
+.quick-menu ul li a p{margin-right: 10px;} 
+/* quick-menu hover */
+.quick-menu .quick-menu-inner ul li:hover p{color: var(--point-color);}
+.quick-menu .quick-menu-inner ul li:hover .img1{background-position: -30px -133px;}
+.quick-menu .quick-menu-inner ul li:hover .img2{background-position: -119px -133px;}
+.quick-menu .quick-menu-inner ul li:hover .img3{background-position: -208px -133px;}
+.quick-menu .quick-menu-inner ul li:hover .img4{background-position: -296px -133px;}
+.quick-menu .quick-menu-inner ul li:hover .img5{background-position: -385px -133px;}
+.quick-menu .quick-menu-inner ul li:hover .img6{background-position: -479px -133px;}

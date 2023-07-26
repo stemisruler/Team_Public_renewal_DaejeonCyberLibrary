@@ -1,0 +1,39 @@
+@media screen and (max-width : 950px){
+    .recommended-books{height: 740px;}
+    .recommended-inner .book-sign{
+        width: 600px; height: 78px;
+    }
+    }
+    @media screen and (max-width : 797px){
+    .recommended-inner .book-sign{
+        width: 550px; height: 70px;
+    }
+    }
+    
+    @media screen and (max-width : 640px){
+        .recommended-inner .book-sign{
+            width: 500px; height: 70px;
+        }
+    }
+    @media screen and (max-width : 530px){
+        .recommended-inner .book-sign{
+            width: 400px; height: 60px;
+        }
+        .slide_list > .swiper-slide>a>img{
+            width: 140px; height: 200px;
+        }
+        .slide_list > .swiper-slide>a>.board-desc{
+            width: 170px; height: 85px;
+            background-size: contain;
+        }
+        .slide_list > .swiper-slide>a>.board-desc>p{
+            font-size: 13px;
+            padding: 1rem;
+        }
+    }
+    @media screen and (max-width : 450px){
+        .slide_list > .swiper-slide>a>.board-desc{
+            width: 150px; height: 85px;
+            background-size: contain;
+        }
+    }

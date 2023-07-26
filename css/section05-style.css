@@ -1,0 +1,76 @@
+.section05 {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+.section05-inner {
+  width: 1280px;
+  position: relative;
+  margin: auto 0px;
+}
+
+.banner-swiper .swiper-wrapper {
+  padding: 1rem 0px;
+  /* swiper 컨테이너가 위 아래로 딱 붙지 않게 간격을 주었다. */
+}
+
+.banner-swiper-slide {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.banner-swiper-slide > a {
+  display: block;
+  width: fit-content;
+  height: auto;
+  position: relative;
+  margin: 0px auto;
+  /* 배너의 이미지에 있는 a태그가 img의 크기에 맞게 크기를 조정하기 위해 fit-content를 추가함 
+  그리고 fit content를 하지 않으면 가상요소 after를 썼을 때, img의 테두리와 너무 벗어나는 현상이 있었다. (독자적인 a 태그 크기를 가져서)*/
+}
+
+.banner-swiper-slide > a::after {
+  /* a태그의 위치에 맞게 조정되는 a의 after 가상 요소 생성->hover효과를 줄 때 유용하다 */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out 0.3s;
+}
+
+.banner-swiper-slide:hover a::after {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.banner-swiper-button-next > span {
+  font-size: var(--h4-size);
+  color: black;
+  font-weight: bold;
+}
+
+/* swiper에서 제공하는 기본적인 파란색 화살표를 다른 화살표로 대체하기 위해 after요소에 있던 화살표들을 font-size 0으로 설정해 모두 없앤다.*/
+.banner-swiper-button-next::after,
+.banner-swiper-button-prev::after {
+  font-size: 0px;
+}
+
+/* banner swiper button next와 prev를 각각 위치를 컨테이너 밖에 빼낸 다음, absolute와 left right rem을 이용해 위치 조정함
+이 둘의 relative 부모는 swiper-container이다. */
+.banner-swiper-button-next {
+  position: absolute;
+  right: -2rem;
+}
+.banner-swiper-button-prev {
+  position: absolute;
+  left: -2rem;
+}
+
+.banner-swiper-button-prev > span {
+  font-size: var(--h4-size);
+  color: var(--sand-color);
+  font-weight: bold;
+}

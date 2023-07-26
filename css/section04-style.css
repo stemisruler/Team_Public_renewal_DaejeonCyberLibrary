@@ -1,0 +1,75 @@
+.section04 /* section04  */ {
+  width: 100%;
+  height: 435px; /* 컨테이너의 높이 설정 */
+  display: flex; /* 컨테이너를 플렉스 컨테이너로 설정 */
+  justify-content: center; /* 컨테이너 내의 아이템들을 중앙 정렬 */
+  align-items: center; /* 컨테이너의 수직 축에서 아이템들을 중앙 정렬 */
+  background: url("../img/section04-library-img/01-dadeok-ansan-lib.png")
+    no-repeat center center / cover; /* 페이지를 열었을 때 보이는 디폴트 배경 이미지 설정 */
+  transition: 0.5s; /* 배경 사진이 바뀔 때 0.5초가 걸리게 하는 트랜지션. */
+}
+.inner {
+  width: 1300px;
+}
+.section04-inner {
+  /* section04 inner */
+  height: 436px; /* section04 inner 높이 설정 */
+  display: flex; /* section04 inner를 플렉스 컨테이너로 설정 */
+}
+
+.lib-area {
+  /* lib-area */
+  height: 100%;
+  border-left: 1px solid white; /* area의 왼쪽에 흰색 테두리 추가 */
+  border-right: 1px solid white; /* area의 오른쪽에 흰색 테두리 추가 */
+  box-sizing: border-box; /* border 및 padding을 요소의 너비/높이에 포함 */
+  display: flex; /* area를 플렉스 컨테이너로 설정 */
+  justify-content: center; /* area 내의 아이템들을 중앙 정렬 */
+  align-items: flex-start; /* area의 수직 축에서 아이템들을 시작점으로 정렬 */
+  flex: 1; /* area 요소가 남은 공간을 채우도록 설정 */
+  transition: 0.5s; /* lib area에 마우스를 올렸을 때 노란색 배경색이 0.5초에 걸쳐 나온다.*/
+}
+
+.lib-area:hover {
+  background-color: #ffe35688; /* area 요소에 마우스가 올라갔을 때의 배경색 설정 */
+}
+
+.lib-text-container {
+  position: relative;
+  color: white;
+  text-align: center;
+  /* 텍스트 요소들이 가운데 정렬하게 만들었다 */
+}
+
+/* margin top을 이용해 text container에서 상단과 거리를 벌려 정렬을 맞췄다 h4, p, a(버튼). */
+.lib-text-container > h4 {
+  font-size: var(--h4-size);
+  margin-top: 75px;
+  font-weight: 600;
+}
+
+.lib-text-container > p {
+  font-size: var(--p-size);
+  margin-top: 68px;
+  font-weight: 400;
+}
+
+.lib-text-container > a {
+  width: 227px;
+  height: 63px;
+  margin-top: 110px;
+  display: block;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  line-height: 63px;
+  text-align: center;
+  /* a태그는 따로 text align center를 해야 가운데 정렬이 됐다.
+  아래는 a태그 버튼 호버시 줄 트랜지션 */
+  transition: 0.5s;
+}
+
+.lib-text-container > a:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,55 @@
+@media screen and (max-width:1280px){
+    .inner{
+        width: 90%;
+    }
+    .notice{
+        height: fit-content;
+        padding-bottom : 3rem; 
+    }
+    .section01-inner{/* 1280px부터 section01은 1row 2col 에서 2row 1col으로 사용하기위한 display: block */
+        display : block;
+    }
+
+    .notice-text-box{
+        padding : 0px;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        margin-bottom : 2rem;
+        padding-top : 2rem;
+    }
+    .notice-name-box h5{
+        font-size: var(--h4-size);
+    }
+    .notice-background{
+        padding-bottom : 5rem;
+    }
+    .notice-banner-box{
+        margin : auto;
+        /* 최소, 최대크기를 한정시키고 사이즈를 유동적으로 변경하기 위한 clamp() 사용 */
+        width: clamp(500px, 90% ,750px);
+        margin-bottom : 2rem;
+    }
+
+}
+
+
+@media screen and (max-width : 660px){
+    .notice-banner-box{
+        margin : auto;
+        width: clamp(350px, 100% ,500px);
+        margin-bottom : 2rem;
+    }
+    .notice-background{
+        padding-bottom : 10rem;
+    }
+    .text-date-box .date{
+        /* 공지내용의 날자부분을 조금 작게되도록 */
+        font-size: 1rem;
+        width: 20%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: right;
+      }
+}

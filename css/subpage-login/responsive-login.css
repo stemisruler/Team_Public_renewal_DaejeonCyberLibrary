@@ -1,0 +1,45 @@
+@media screen and (max-width : 1000px){
+  .inner{width: 90%;}
+  .contents-inner{justify-content:center;
+    height: 700px;}
+  /* lnb 밑 bg 이미지 none */
+  .contents-inner .lnb{display: none;}
+  .contents-background-img-up, .contents-background-img-down, .contents-background-img-right{display: none;}
+  .contents-inner .sub-content .content-head p{width: 80px; margin: auto;}
+  /* 위 */
+  .contents-inner .sub-content .content-head{text-align: center;}
+  .content-head .current-login{display: none;}
+  .content-head .login-head-box p::before{
+    top: -75%;
+    left: -3%;
+  }
+  /* 중앙 */
+  .contents-inner .sub-content .content-main{
+    flex-direction: column;
+  }
+  .content-main .left-main span{display: block; text-align: center;}
+  .content-main .left-main{margin: auto;}
+  .content-main .right-main{margin: auto;}
+  .content-main .right-main .cat-img{
+    transform: translateY(0px);
+    margin-top: 40px;
+    width: 420px; 
+  }
+  .search-login ul{transform: translateX(0px);}
+  /* 하단 */
+  .contents-inner .sub-content .content-desc{text-align: center;}
+}
+@media screen and (max-width : 500px){
+  .content-main .left-main {width: 300px;}
+  .content-main .left-main .login-box input[type="email"],input[type="password"]{
+    width: 300px; height: 35px; display: block; 
+  }
+  .content-main .left-main .login-box input[type="submit"]{
+    width: 300px; height: 35px;
+  }
+  .content-main .right-main .cat-img{
+    margin-top: 40px;
+    width: 320px; 
+    height: 150px;
+  }
+}

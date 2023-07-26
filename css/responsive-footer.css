@@ -1,0 +1,48 @@
+@media (max-width: 1080px) {
+  .footer {
+    position: relative;
+  }
+  .inner.footer-inner {
+    width: 90%;
+    height: 170px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1rem;
+    position: relative;
+  }
+
+  .footer-logo {
+    float: left;
+    padding-left: 2rem;
+  }
+  .footer-logo > a > img {
+    width: 184px;
+    height: 69px;
+    transform: scale(1.3);
+    /* 이미지 크기가 작아 1.3배 키웠다. */
+  }
+
+  .policies {
+    position: absolute;
+    top: 5%; /* policies 상단으로 올리기 */
+  }
+
+  .policies > li > a {
+    white-space: nowrap; /* 줄 바꿈 방지 */
+  }
+  .policy-and-copy {
+    margin-right: 0;
+  }
+  .policy-and-copy .copy {
+    font-family: "Pretendard-Thin"; /* pretendard regular를 쓰면 font weight가 변하지 않는 현상을 발견해, pretendard Thin을 따로 구하여 적용했다. */
+    font-size: 0.85rem;
+  }
+  .policy-and-copy .copy-span {
+    display: block;
+  }
+  .policy-and-copy br {
+    display: none;
+  }
+}

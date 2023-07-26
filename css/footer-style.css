@@ -1,0 +1,50 @@
+.footer {
+  width: 100%;
+  background-color: var(--sand-color);
+}
+
+.footer-inner {
+  width: 1300px;
+  height: 142px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  color: var(--white-color);
+}
+.footer-logo {
+  width: 0%;
+  /* footer logo의 원래 크기를 제거한다 - 이걸 하지 않으면 footer logo안의 있는 a 태그가 footer-logo만큼의 크기를 가지게 되어서
+    a태그 때문에 로고와 다른 텍스트들 간의 정렬이 되지 않는다(보이지 않는 벽에 막힘) */
+}
+.footer-logo > a {
+  display: inline-block;
+  width: 0%;
+  /* 정렬을 위해 width를 제거 */
+}
+.footer-logo > a > img {
+  transform: scale(0.6);
+  /* 이미지 크기를 0.6배로 줄인다 */
+}
+
+.policy-and-copy {
+  /* margin-right: auto; */
+}
+.policies {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+
+.policies > li > a {
+  color: var(--white-color);
+}
+
+.point-color {
+  color: var(--point-color);
+}
+
+.copy-p {
+  font-weight: 200;
+}

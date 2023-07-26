@@ -1,0 +1,243 @@
+.inner{
+  width: 1280px;
+}
+
+.notice{
+  height: 460px;
+  position: relative;
+  padding-top : 1rem;
+  overflow: hidden;
+}
+
+.section01-inner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice-background{ /* section01 의 뒤에 배경이미지로 쓰인 배경이미지 */
+  position: absolute;
+  background-image: url("../img/section01-notice-img/notice-background.png");
+  width: 100%;
+  height: 110%;
+  bottom: -100%;
+  left: -20%;
+  background-repeat: no-repeat;
+  transform: rotate(15deg);
+  z-index: -2;
+}
+.notice-background::after{  /* 배경이미지가 너무 진한 black이여서 after를 이용하여 줄였음 */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: -1;
+}
+
+.notice-text-box{
+  width: 50%;
+  height: 237px;
+  padding : 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: relative;
+}
+
+.notice-text-box::after{    /* 배경의 notice-background가 넘어왔을때 text영역에 온 배경이 더 연하게하기 위함 */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+}
+
+.notice-name-box{
+  position : relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.notice-name-box .point-color-image{
+  position: absolute;
+  top : -25px;
+  left : -15%;
+}
+.notice-name-box h5{
+  font-size: var(--h5-size);
+  font-weight: bold;
+  
+}
+.notice-name-box i{
+  font-size: 2.5rem;
+  color : var(--point-color2);
+  transition : 0.5s;
+  transition-delay: 0.15s;
+}
+.notice-name-box i:hover{ /* +기호가 hover시 돌아가는 애니메이션을 추가하기위함 */
+  transform: rotate(135deg);
+}
+
+.notice-text-box ul{
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.notice-text-box li a{
+  width: 100%;  
+  display: flex;
+  align-items: center;
+}
+.notice-text-box span{
+  font-size : var(--p-size);
+}
+.notice-text-box .target{
+  margin : 0px; 
+}
+
+.notice-text-box .target{
+  box-sizing: border-box;
+  white-space: nowrap;
+  height: 100%;
+  padding : 3px 6px;
+  border-radius: 10px 0 0 0 ;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.text-date-box{
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position : relative;
+}
+
+.text-date-box::after{  /* hover시 밑줄이 그어지게끔 하기 위함 */
+  content: "";
+  position: absolute;
+  bottom : -20%;
+  width: 0%;
+  box-sizing: border-box;
+  border-bottom : 2px solid var(--point-color2);
+  transition: 0.8s;
+}
+.text-date-box:hover::after{
+  width: 100%;
+}
+.text-date-box:hover .text{
+  font-weight: bold;
+}
+.text-date-box:hover .date{
+  color : var(--point-color2);
+  font-weight: bold;
+}
+.text-date-box .text{ /* 말줄임표를 사용 */
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-date-box .date{
+  position: absolute;
+  right: 0%;
+}
+
+
+
+/* 공지사항의 target클래스는 이중클래스 사용 */
+.target.notice{ /* 공지 : 주황색 */
+  color : white;
+  background-color: #FF7D34;
+  box-shadow : 1px 1px 2px #FF7D34;
+}
+.target.all{ /* 전체 : point-color2 */
+  color : white;
+  background-color: var(--point-color2);
+  box-shadow : 1px 1px 2px var(--point-color2);
+}
+.target.hanbat{ /* 한밭 : 녹색 */
+  color : white;
+  background-color: #6BDC12;
+  box-shadow : 1px 1px 2px #6BDC12;
+}
+.target.gayang{ /* 가양 : 갈색 */
+  color : white;
+  background-color: #ce9c30;
+  box-shadow : 1px 1px 2px #ce9c30;
+}
+.target.ganggyung{ /* rkdrud : 파란색 */
+  color : white;
+  background-color: #47bbff;
+  box-shadow : 1px 1px 2px #47bbff;
+}
+
+/* 배너 */
+.notice-banner-box{
+  width: 40%;
+  /* height: 287px; */
+  overflow: hidden;
+  margin : 0px 60px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px var(--point-color2);
+  border-radius: 10px;
+}
+
+.notice-swiper {
+  width: 100.1%;
+  height: 100%;
+}
+
+.notice-banner-box .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice-banner-box .swiper-slide a{
+  display: block;
+  width: 100%;
+}
+
+.notice-banner-box .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.notice-swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notice-swiper .swiper-button-next::after,
+.notice-swiper .swiper-button-prev::after{
+  display: none;  /* 기존 swipe.js 화살표 사용하지 않기위함 */
+}
+
+.notice-swiper .swiper-pagination-bullet{/* 기존 swipe.js 의 pagination 사용 x*/
+  height: 0;
+  position: relative;
+}
+.notice-swiper .swiper-pagination-bullet::after{/* 하얀색 원형 div를 이용해 pagination 구현 */
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color : white;
+  border-radius: 50%;
+  bottom : 10%;
+}

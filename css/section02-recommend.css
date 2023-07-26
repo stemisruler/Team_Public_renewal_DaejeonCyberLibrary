@@ -1,0 +1,90 @@
+/* bg */
+.recommended-books{
+    width: 100%; height: 800px; background-color: #E8DFD6;
+    display: flex; transition: .4s;
+}
+.recommended-inner{
+    height: 650px;
+    display: flex;  justify-content: center;
+    align-items: center; flex-direction: column; 
+    position: relative;
+
+}
+/* 표지판 */
+.recommended-inner .book-sign{
+    width: 690px; height: 84px;
+    background: url(../img/section02-img/표지판-글자있음.svg) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top:20px;
+    transition: .4s;
+}
+/* 코르크 보드 */
+.recommended-inner .board{
+    width: 100%; height: 480px;
+    background: url(../img/section02-img/sec02-bg1.svg) no-repeat center center;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* 슬라이더 */
+.board .slider {
+    overflow: hidden;
+    position: relative;
+    width: 1000px;}
+.board .slider .slider-inner{}
+.slider .board-inner {overflow: hidden;margin: 0 50px;}
+.slide_list > .swiper-slide {
+    height: 330px;
+    font-size: 20px;text-align: center;
+    display: flex;
+    justify-content: center; align-items: center;
+}
+.slide_list > .swiper-slide>a{display: flex; 
+    justify-content: center; align-items: center;
+    flex-direction: column;}
+.slide_list > .swiper-slide>a>img{
+    transition: .3s;
+    width: 160px; height: 220px;
+}
+.slide_list > .swiper-slide>a>.board-desc{
+    transition: .3s;
+    width: 199px; height: 86px; margin-top: 10px;
+    background: url(../img/section02-img/desc.svg)no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide_list > .swiper-slide>a>.board-desc>p{
+    display: block;
+    font-size: 15px;
+}
+/* 버튼 */
+.board  .btn {
+    position: absolute;
+    bottom: 2%;
+    width: 35px;height: 35px;
+    background:url('../img/section02-img/arrow.png') center center no-repeat;background-size: cover;font-size: 0; cursor: pointer;}
+.board  .btn.btn_prev {
+    left: clamp(30%,25%,30%);
+    transform: rotateY(180deg) translateY(2%);
+
+}
+.board  .btn.btn_next {
+    right:clamp(30%,25%,30%);
+    transform: translateY(2%);
+
+}
+/* 슬라이드 수 */
+.paginationCount{
+    width: 100px;
+    position: absolute;
+    bottom: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
