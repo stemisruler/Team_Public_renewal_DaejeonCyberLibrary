@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원서비스>공지사항</title>
+  <!-- jquery cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- xeicon -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"/>
+  <!-- reset css -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer-style.css" />
+  <!-- 공통부분 css -->
+  <link rel="stylesheet" href="css/common-sub/sub-visual.css">
+  <link rel="stylesheet" href="css/common-sub/sub-lnb.css">
+  <!-- 개별 css -->
+  <link rel="stylesheet" href="css/subpage-notice/sub-notice.css">
+  <!-- 반응형 공통부분 css -->
+  <link rel="stylesheet" href="css/responsive-header.css">
+  <link rel="stylesheet" href="css/responsive-footer.css">
+  <link rel="stylesheet" href="css/common-sub/responsive-sv.css">
+  <!-- 반응형 개인부분 css -->
+  <link rel="stylesheet" href="css/subpage-notice/responsive-notice.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 헤더(header) -->
+    <header>
+      <div class="header-inner">
+        <!-- logo 시작 -->
+        <div class="header-logo">
+          <a href="index.html"><img src="img/header-img/logo3.svg" alt=""></a>
+        </div>
+        <!-- gnb 시작 -->
+        <div class="header-gnb">
+          <!-- gnb메뉴 -->
+          <ul class="menu">
+            <li>
+              <a href="#">자료검색</a>
+              <div class="sub-menu">
+                <div class="sub-menu-inner">
+                  <ul class="sub">
+                    <li><a href="#">통합검색</a></li>
+                    <li><a href="#">전자책</a></li>
+                    <li><a href="#">전자잡지</a></li>
+                    <li><a href="#">웹DB</a></li>
+                    <li><a href="#">오디오북</a></li>
+                    <li><a href="#">북러닝</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">도서관안내</a> 
+              <div class="sub-menu">
+                <div class="sub-menu-inner">
+                  <ul class="sub">
+                    <li><a href="#">도서관안내센터</a></li>
+                    <li><a href="#">관종별도서관검색</a> </li>
+                    <li><a href="#">대전공공도서관</a></li>
+                    <li><a href="#">대전작은도서관</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="notice.html">열린마당</a> 
+              <div class="sub-menu">
+                <div class="sub-menu-inner">
+                  <ul class="sub">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="#">통합회원안내</a></li>
+                    <li><a href="#">책이음서비스</a></li>
+                    <li><a href="#">SDI 서비스</a></li>
+                    <li><a href="#">독서포인트</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">도서관소개</a> 
+              <div class="sub-menu">
+                <div class="sub-menu-inner">
+                  <ul class="sub">
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">연락처</a></li>
+                    <li><a href="#">이용안내</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- 서브메뉴 바탕색용 div -->
+          <div class="sub-menu-bg"></div>
+        </div>
+        <!-- icon 시작 -->
+        <div class="header-login">
+          <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+          <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+          <a href="https://lib.nonsan.go.kr/lib/sitemap_11.do" class="desktop-ham" target="_blank"><i class="xi-bars"></i></a>
+          <a href="#" class="hamburger"><i class="xi-bars"></i></a>
+          <!-- 반응형 gnb 시작 -->
+          <div class="responsive-gnb">
+            <div class="res-inner">
+              <div class="res-head">
+                <div class="res-icon">
+                  <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+                  <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+                  <a href="#" class="ham-close"><i class="xi-close"></i></a>
+                </div>
+              </div>
+              <div class="res-desc">
+                <ul>
+                  <li>
+                    <a href="#" class="collapsible">자료검색</a>
+                    <div class="content-sub">
+                      <div class="coi coi1">
+                        <ul class="sub">
+                          <li><a href="#">통합검색</a></li>
+                          <li><a href="#">전자책</a></li>
+                          <li><a href="#">전자잡지</a></li>
+                          <li><a href="#">웹DB</a></li>
+                          <li><a href="#">오디오북</a></li>
+                          <li><a href="#">북러닝</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="collapsible">도서관안내</a>
+                    <div class="content-sub">
+                      <div class="coi coi2">
+                        <ul class="sub">
+                          <li><a href="#">도서관안내센터</a></li>
+                          <li><a href="#">관종별도서관검색</a> </li>
+                          <li><a href="#">대전공공도서관</a></li>
+                          <li><a href="#">대전작은도서관</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="collapsible">열린마당</a>
+                    <div class="content-sub">
+                      <div class="coi coi3">
+                        <ul class="sub">
+                          <li><a href="notice.html">공지사항</a></li>
+                          <li><a href="#">통합회원안내</a></li>
+                          <li><a href="#">책이음서비스</a></li>
+                          <li><a href="#">SDI 서비스</a></li>
+                          <li><a href="#">독서포인트</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="collapsible">도서관소개</a>
+                    <div class="content-sub">
+                      <div class="coi coi4">
+                        <ul class="sub">
+                          <li><a href="#">인사말</a></li>
+                          <li><a href="#">연혁</a></li>
+                          <li><a href="#">연락처</a></li>
+                          <li><a href="#">이용안내</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header><!-- main 동일 -->
+
+    <div class="visual">
+      <div class="visual-sub-bg">
+        <p>도서관을 잇다, 대전 사이버 도서관</p>
+      </div>
+      <div class="visual-bar">
+        <div class="inner bar-inner">
+          <ul>
+            <li><a href="index.html"><i class="xi-home"></i></a></li>
+            <li><a href="#"><p>열린마당</p></a></li>
+            <li><a href="notice.html"><strong>공지사항</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- 공통 visual -->
+
+    <div class="contents">
+      <!-- 배경이미지 필요하시면 사용하고 어울리지않다면 개인 html에선 지워주세요 -->
+      <img src="img/sub-page/common/pattern-up.png" alt="" class="contents-background-img-up">
+      <img src="img/sub-page/common/pattern-down.png" alt="" class="contents-background-img-down">
+      <img src="img/sub-page/common/right-line.png" alt="" class="contents-background-img-right">
+      <div class="inner contents-inner">
+        <div class="lnb">
+          <span>열린마당</span>
+          <ul>
+            <li class="current-page"><a href="notice.html">공지사항</a></li>
+            <li><a href="#">통합회원안내</a></li>
+            <li><a href="#">책이음 서비스</a></li>
+            <li><a href="#">SDI 서비스</a></li>
+            <li><a href="#">독서 포인트</a></li>
+          </ul>
+        </div> <!-- 공통 lnb -->
+
+        <!-- 개별작업 -->
+        <div class="sub-content">
+          <div class="notice-name">
+            <div class="mini-nav">
+              <ul> 
+                <li><a href="index.html"><i class="xi-home"></i></a></li>
+                <li><a href="#"><p>>열린마당> </p></a></li>
+                <li><a href="notice.html"><strong>공지사항</strong></a></li>
+              </ul>
+            </div>
+
+            <div class="notice-main-name">
+              <h2>공지사항</h2>
+            </div>
+            <div class="share-and-print">
+              <button><i class="xi-share-alt-o xi-2x"></i></button>
+              <button><i class="xi-print xi-2x"></i></button>
+            </div>
+          </div>
+          
+          <div class="search-wrap">
+            <select name="library" id="library" class="library-select">
+              <option value="전체" disabled selected>도서관 선택</option>
+              <option value="전체">전체</option>
+              <option value="한밭도서관">한밭도서관</option>
+              <option value="학생교육문화원">학생교육문화원</option>
+              <option value="산성도서관">산성도서관</option>
+              <option value="가수원도서관">가수원도서관</option>
+              <option value="둔산도서관">둔산도서관</option>
+              <option value="갈마도서관">갈마도서관</option>
+              <option value="어린이도서관">어린이도서관</option>
+              <option value="신탄진도서관">신탄진도서관</option>
+              <option value="안산도서관">안산도서관</option>
+              <option value="송촌도서관">송촌도서관</option>
+              <option value="유성도서관">유성도서관</option>
+              <option value="진잠도서관">진잠도서관</option>
+              <option value="구즉도서관">구즉도서관</option>
+              <option value="노은도서관">노은도서관</option>
+              <option value="구암도서관">구암도서관</option>
+              <option value="유성엑스포도서관">유성엑스포도서관</option>
+              <option value="용운도서관">용운도서관</option>
+              <option value="가양도서관">가양도서관</option>
+              <option value="무지개도서관">무지개도서관</option>
+              <option value="성남도서관">성남도서관</option>
+              <option value="가오도서관">가오도서관</option>
+              <option value="판암도서관">판암도서관</option>
+              <option value="자양도서관">자양도서관</option>
+              <option value="홍도도서관">홍도도서관</option>
+              
+            </select>
+            <select name="target" id="target" class="notice-target">
+              <option value="전체">전체</option>
+              <option value="내용">내용</option>
+              <option value="제목">제목</option>
+            </select>
+            <div class="notice-search-wrap">
+              <input type="text" name="notice-search" id="notice-search"  placeholder="검색어를 입력해 주세요">
+              <button><i class="xi-search"></i></button>
+            </div>
+          </div>
+          <div class="notice-ul-wrap">
+            <ul class="upper-ul">
+              <li class="upper-li">
+                <ul class="lower-ul library-ul">
+                  <li class="lower-li li-name">도서관</li>
+                  <a href="#none"><li class="lower-li library-notice"> 
+                    <div class="library-point-color"> 공지 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-all"> 
+                    <div class="library-point-color"> 전체 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-hanbat"> 
+                    <div class="library-point-color"> 한밭 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-gayang"> 
+                    <div class="library-point-color"> 가양 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-ganggyong"> 
+                    <div class="library-point-color"> 강경 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-seogu"> 
+                    <div class="library-point-color"> 서구 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-galma"> 
+                    <div class="library-point-color"> 갈마 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-guam"> 
+                    <div class="library-point-color"> 구암 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-notice"> 
+                    <div class="library-point-color"> 공지 </div> </li>
+                  </a>
+                  <a href="#none"><li class="lower-li library-all"> 
+                    <div class="library-point-color"> 전체 </div> </li>
+                  </a>
+                </ul>
+              </li>
+              <li class="upper-li">
+                <ul class="lower-ul notice-text-ul">
+                  <li class="lower-li li-name">제목</li>
+                  <a href="#none"><li class="lower-li">2023년 한밭도서관 정보화교육 안내</li></a>
+                  <a href="#none"><li class="lower-li">스마트폰 오류시 PC사용 요망</li></a>
+                  <a href="#none"><li class="lower-li">피지컬 컴퓨팅 코딩(플레이 코드) 교육생 모집 </li></a>
+                  <a href="#none"><li class="lower-li">가양도서관 9월말 운영 종료(2021.12월 폐관예정) </li></a>
+                  <a href="#none"><li class="lower-li">강경도서관 어린이 체험 마당극 - 우렁각시 공연안내</li></a>
+                  <a href="#none"><li class="lower-li">시민 정보화교육(폴라리스 오피스 야간) 교육생 모집</li></a>
+                  <a href="#none"><li class="lower-li">스마트폰 영상제작 첫걸음 교육생 모집</li></a>
+                  <a href="#none"><li class="lower-li">(기초)엑셀 2016 교육생 모집 안내</li></a>
+                  <a href="#none"><li class="lower-li">『프리미어를 활용한 영상제작 기초』 교육생 모집 안내</li></a>
+                  <a href="#none"><li class="lower-li">KT와 함께하는 『AI코딩 Tomorrow』 11월 교육과정 교육생 모집</li></a>
+                </ul>
+              </li>
+              <li class="upper-li">
+                <ul class="lower-ul notice-author-ul">
+                  <li class="lower-li li-name">작성자</li>
+                  <a href="#none"><li class="lower-li">관리자</li></a>
+                  <a href="#none"><li class="lower-li">대전사이버도서관</li></a>
+                  <a href="#none"><li class="lower-li">한밭도서관</li></a>
+                  <a href="#none"><li class="lower-li">가양도서관</li></a>
+                  <a href="#none"><li class="lower-li">강경도서관</li></a>
+                  <a href="#none"><li class="lower-li">서구도서관</li></a>
+                  <a href="#none"><li class="lower-li">갈마도서관</li></a>
+                  <a href="#none"><li class="lower-li">구암도서관</li></a>
+                  <a href="#none"><li class="lower-li">관리자</li></a>
+                  <a href="#none"><li class="lower-li">대전사이버도서관</li></a>
+                </ul>
+              </li>
+              <li class="upper-li">
+                <ul class="lower-ul notice-day-ul">
+                  <li class="lower-li li-name">작성일</li>
+                  <a href="#none"><li class="lower-li">2023-06-18</li></a>
+                  <a href="#none"><li class="lower-li">2023-06-09</li></a>
+                  <a href="#none"><li class="lower-li">2023-06-09</li></a>
+                  <a href="#none"><li class="lower-li">2023-06-04</li></a>
+                  <a href="#none"><li class="lower-li">2023-06-03</li></a>
+                  <a href="#none"><li class="lower-li">2023-06-02</li></a>
+                  <a href="#none"><li class="lower-li">2023-06-02</li></a>
+                  <a href="#none"><li class="lower-li">2023-06-01</li></a>
+                  <a href="#none"><li class="lower-li">2023-05-26</li></a>
+                  <a href="#none"><li class="lower-li">2023-05-26</li></a>
+                </ul>
+              </li>
+              
+              <li class="upper-li">
+                <ul class="lower-ul notice-attachment">
+                  <li class="lower-li li-name">첨부</li>
+                  <li class="lower-li attachment"> <a href="#none"><i class="xi-link"></i></a> </li> 
+                  <li class="lower-li"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li attachment"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li attachment"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li"><a href="#none"><i class="xi-link"></i></a></li>
+                  <li class="lower-li"><a href="#none"><i class="xi-link"></i></a></li>
+                </ul>
+              </li>
+            </ul>
+
+
+            <div class="pagination-wrap">
+              <a href="#none" class="go-prev-page">  <i class="xi-angle-left-min xi-2x"></i> </a>
+              <a href="#none" class="pagination current-page-in-notice">  1  </a>
+              <a href="#none" class="pagination">  2  </a>
+              <a href="#none" class="pagination">  3  </a>
+              <a href="#none" class="pagination">  4  </a>
+              <a href="#none" class="pagination">  5  </a>
+              <a href="#none" class="pagination">  6  </a>
+              <a href="#none" class="pagination">  7  </a>
+              <a href="#none" class="pagination">  8  </a>
+              <a href="#none" class="pagination">  9  </a>
+              <a href="#none" class="go-next-page">  <i class="xi-angle-right-min xi-2x "></i>  </a>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <!-- 개별 콘텐츠 -->
+
+    <!-- 푸터(footer) -->
+    <footer class="footer">
+        <div class="inner footer-inner">
+          <div class="footer-logo">
+            <a href="#none">
+              <img src="img/logo3.svg" alt="" />
+            </a>
+          </div>
+          <div class="policy-and-copy">
+            <div class="policy">
+              <ul class="policies">
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">이메일무단수집거부</a></li>
+              </ul>
+              <div class="copy">
+                <p class="copy-p">
+                  홈페이지 관리: 한밭도서관 &#40;35020&#41;
+                  <span class="copy-span"
+                    >대전광역시 중구 서문로 10&#40;문화동&#41; &#47; 대표번호
+                    042&#41;270-7420</span
+                  ><br />
+                  COPYRIGHT &copy;
+                  <span class="point-color">2013 DAEJEON CYBER LIBRARY.</span>
+                  ALL RIGHTS RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer><!-- main 동일 -->
+  </div>
+
+  <!-- submenu 이벤트용 js -->
+  <script src="js/header-sub.js"></script>
+  <script src="js/header-res-sub.js"></script>
+
+  <!-- sub-page js -->
+  <script src="js/subpage-notice/subpage-notice.js"></script>
+</body>
+</html>

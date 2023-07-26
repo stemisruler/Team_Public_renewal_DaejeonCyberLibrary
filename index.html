@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대전사이버도서관</title>
+    <!-- swipe css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- xeicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <!-- reset css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- desktop css -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/visual.css">
+    <link rel="stylesheet" href="css/section01-notice.css" />
+    <link rel="stylesheet" href="css/section02-recommend.css" />
+    <link rel="stylesheet" href="css/section03-how-to.css" />
+    <link rel="stylesheet" href="css/section04-style.css" />
+    <link rel="stylesheet" href="css/section05-style.css" />
+    <link rel="stylesheet" href="css/footer-style.css" />
+    <!-- 반응형 css -->
+    <link rel="stylesheet" href="css/responsive-header.css">
+    <link rel="stylesheet" href="css/responsive-visual.css" />
+    <link rel="stylesheet" href="css/responsive-section01.css" />
+    <link rel="stylesheet" href="css/responsive-section02.css" />
+    <link rel="stylesheet" href="css/responsive-section03.css" />
+    <link rel="stylesheet" href="css/responsive-section04.css" />
+    <link rel="stylesheet" href="css/responisve-section05.css" />
+    <link rel="stylesheet" href="css/responsive-footer.css" />
+  </head>
+  <body>
+    <!-- 사용설명서(추후 지움)
+    1. class명은 하이픈(-) 
+    2. 직관적인 class명 제작
+    3. 통일감있는 class명
+    4. css js 파일명 영어로 통일 해주세요(추후 link시 한글이 있으면 오류가 날 수 있음)
+    5. img 파일 확장명도 확인. 파일명 영어로 통일 해줄수 있음 해주세요.
+  -->
+    <div class="container">
+      <!-- 헤더(header) -->
+      <header>
+        <div class="header-inner">
+          <!-- logo 시작 -->
+          <div class="header-logo">
+            <a href="index.html"><img src="img/header-img/logo3.svg" alt=""></a>
+          </div>
+          <!-- gnb 시작 -->
+          <div class="header-gnb">
+            <!-- gnb메뉴 -->
+            <ul class="menu">
+              <li>
+                <a href="#">자료검색</a>
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">통합검색</a></li>
+                      <li><a href="#">전자책</a></li>
+                      <li><a href="#">전자잡지</a></li>
+                      <li><a href="#">웹DB</a></li>
+                      <li><a href="#">오디오북</a></li>
+                      <li><a href="#">북러닝</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">도서관안내</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">도서관안내센터</a></li>
+                      <li><a href="#">관종별도서관검색</a> </li>
+                      <li><a href="#">대전공공도서관</a></li>
+                      <li><a href="#">대전작은도서관</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="notice.html">열린마당</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="notice.html">공지사항</a></li>
+                      <li><a href="#">통합회원안내</a></li>
+                      <li><a href="#">책이음서비스</a></li>
+                      <li><a href="#">SDI 서비스</a></li>
+                      <li><a href="#">독서포인트</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">도서관소개</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">인사말</a></li>
+                      <li><a href="#">연혁</a></li>
+                      <li><a href="#">연락처</a></li>
+                      <li><a href="#">이용안내</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 서브메뉴 바탕색용 div -->
+            <div class="sub-menu-bg"></div>
+          </div>
+          <!-- icon 시작 -->
+          <div class="header-login">
+            <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+            <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+            <a href="https://lib.nonsan.go.kr/lib/sitemap_11.do" class="desktop-ham" target="_blank"><i class="xi-bars"></i></a>
+            <a href="#" class="hamburger"><i class="xi-bars"></i></a>
+            <!-- 반응형 gnb 시작 -->
+            <div class="responsive-gnb">
+              <div class="res-inner">
+                <div class="res-head">
+                  <div class="res-icon">
+                    <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+                    <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+                    <a href="#" class="ham-close"><i class="xi-close"></i></a>
+                  </div>
+                </div>
+                <div class="res-desc">
+                  <ul>
+                    <li>
+                      <a href="#" class="collapsible">자료검색</a>
+                      <div class="content-sub">
+                        <div class="coi coi1">
+                          <ul class="sub">
+                            <li><a href="#">통합검색</a></li>
+                            <li><a href="#">전자책</a></li>
+                            <li><a href="#">전자잡지</a></li>
+                            <li><a href="#">웹DB</a></li>
+                            <li><a href="#">오디오북</a></li>
+                            <li><a href="#">북러닝</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">도서관안내</a>
+                      <div class="content-sub">
+                        <div class="coi coi2">
+                          <ul class="sub">
+                            <li><a href="#">도서관안내센터</a></li>
+                            <li><a href="#">관종별도서관검색</a> </li>
+                            <li><a href="#">대전공공도서관</a></li>
+                            <li><a href="#">대전작은도서관</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">열린마당</a>
+                      <div class="content-sub">
+                        <div class="coi coi3">
+                          <ul class="sub">
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="#">통합회원안내</a></li>
+                            <li><a href="#">책이음서비스</a></li>
+                            <li><a href="#">SDI 서비스</a></li>
+                            <li><a href="#">독서포인트</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">도서관소개</a>
+                      <div class="content-sub">
+                        <div class="coi coi4">
+                          <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">연락처</a></li>
+                            <li><a href="#">이용안내</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 메인 시작 -->
+      <main>
+        <!-- 메인 비주얼 visual -->
+        <section class="visual">
+          <!-- visual 검색창 및 자주가는메뉴 -->
+          <div class="inner visual-inner">
+            <div class="search">
+              <div class="search-bar">
+                <input type="text" id="typing-search" placeholder="도서 제목을 입력해 주세요." onfocus="this.placeholder=''" onblur="this.placeholder='도서 제목을 입력해 주세요.'" />
+                <input type="submit" id="search-submit" class="search-icon" >
+              </div>
+            </div>
+            <div class="quick-menu">
+              <div class="quick-menu-inner">
+                <ul>
+                  <span>자주찾는메뉴</span>
+                  <span class="check"></span> <!-- check-img 넣는용 -->
+                  <li><a href="#">
+                    <div class="quick-img img1"></div>
+                    <p>전자책</p>
+                  </a></li>
+                  <li><a href="#">
+                    <div class="quick-img img2"></div>
+                    <p>전자잡지</p>
+                  </a></li>
+                  <li><a href="#">
+                    <div class="quick-img img3"></div>
+                    <p>웹DB</p>
+                  </a></li>
+                  <li><a href="#">
+                    <div class="quick-img img4"></div>
+                    <p>오디오북</p>
+                  </a></li>
+                  <li><a href="#">
+                    <div class="quick-img img5"></div>
+                    <p>북러닝</p>
+                  </a></li>
+                  <li><a href="#">
+                    <div class="quick-img img6"></div>
+                    <p>통합검색</p>
+                  </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- visual 배경이미지 -->
+          <div class="visual-bg">
+            <ul>
+              <li><img class="active" src="img/visual-img/main_vi1.jpg" alt="Image 1"></li>
+              <li><img src="img/visual-img/main_vi2.jpg" alt="Image 2"></li>
+              <li><img src="img/visual-img/main_vi5.jpg" alt="Image 3"></li>
+              <li><img src="img/visual-img/main_vi3.jpg" alt="Image 4"></li>
+              <li><img src="img/visual-img/main_vi6.jpg" alt="Image 5"></li>
+            </ul>
+          </div>
+        </section>
+        <!-- 섹션01 공지사항(notice) -->
+        <section class="notice">
+          <div class="notice-background"></div>
+          <!-- section01 의 뒤에 있는 배경이미지 -->
+          <div class="inner section01-inner">
+            <!-- 공지사항 text -->
+            <div class="notice-text-box">
+              <!-- 공지사항 & 배너를 묶은 box -->
+              <div class="notice-name-box">
+                <!-- 공지사항의 상단에 "공지사항" 텍스트와 + 기호를 묶은 box -->
+                <img
+                  src="img/point-color-image.png"
+                  alt=""
+                  class="point-color-image"
+                />
+                <h5>공지사항</h5>
+                <a href="notice.html"><i class="xi-plus-thin"></i></a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#none">
+                    <span class="target notice">공지</span>
+                    <!--  공지의 대상 혹은 공지한 도서관 명 -->
+                    <div class="text-date-box">
+                      <!-- 공지내용과 글의 기재 날자를 묶은 box -->
+                      <span class="text"
+                        >2023년 한밭도서관 정보화교육 안내</span
+                      >
+                      <!-- 공지내용 -->
+                      <span class="date">2023-02-27</span>
+                      <!-- 기재 날자 -->
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span class="target all">전체</span>
+                    <div class="text-date-box">
+                      <span class="text">스마트폰 오류시 PC사용 요망</span>
+                      <span class="date">2023-05-27</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span class="target hanbat">한밭</span>
+                    <div class="text-date-box">
+                      <span class="text"
+                        >피지컬 컴퓨팅 코딩(플레이 코드) 교육생 모집
+                      </span>
+                      <span class="date">2023-05-22</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span class="target gayang">가양</span>
+                    <div class="text-date-box">
+                      <span class="text"
+                        >가양도서관 9월말 운영 종료(2021.12월 폐관예정)</span
+                      >
+                      <span class="date">2023-05-03</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span class="target ganggyung">강경</span>
+                    <div class="text-date-box">
+                      <span class="text"
+                        >강경도서관 어린이 체험 마당극 - 우렁각시 공연
+                        안내</span
+                      >
+                      <span class="date">2023-05-02</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 배너 swipe -->
+            <div class="notice-banner-box">
+              <!-- 배너 -->
+              <div class="swiper notice-swiper">
+                <!-- 배너 속 스와이프 -->
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <!-- 슬라이더 -->
+                    <a href="#none">
+                      <img
+                        src="img/section01-notice-img/banner-img-1.png"
+                        alt=""
+                      />
+                      <!-- 배너이미지 -->
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img
+                        src="img/section01-notice-img/banner-img-2.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img
+                        src="img/section01-notice-img/banner-img-3.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img
+                        src="img/section01-notice-img/banner-img-4.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img
+                        src="img/section01-notice-img/banner-img-5.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-next">
+                  <img
+                    src="img/section01-notice-img/btn-popup-next.png"
+                    alt=""
+                  />
+                  <!-- swipe.js 기본 화살표를 사용하지않고 img를 사용하기위함 -->
+                </div>
+                <div class="swiper-button-prev">
+                  <img
+                    src="img/section01-notice-img/btn-popup-prev.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 섹션02 추천도서(recommended-books) -->
+        <section class="recommended-books">
+          <div class="inner recommended-inner">
+            <!-- 표지판 -->
+            <div class="book-sign"></div>
+            <!-- 코르크 보드 스와이퍼 -->
+            <div class="board">
+              <div class="slider">
+                <div class="board-inner">
+                    <ul class="swiper-wrapper slide_list">
+                        <li class="swiper-slide">
+                          <a href="#">
+                            <img src="img/section02-img/chat-GPT.jpg" alt="">
+                            <div class="board-desc">
+                              <p>
+                                GPT 제너레이션:<br>챗GPT가 바꿀 인류의 미래
+                              </p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="swiper-slide">
+                          <a href="#">
+                            <img src="img/section02-img/haker.jpg" alt="">
+                            <div class="board-desc">
+                              <p>
+                                해커를 위한 디자인 레슨
+                              </p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="swiper-slide">
+                          <a href="#">
+                            <img src="img/section02-img/core-js.jpg" alt="">
+                            <div class="board-desc">
+                              <p>
+                                코어 자바스크립트 
+                              </p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="swiper-slide">
+                          <a href="#">
+                            <img src="img/section02-img/nodejs.jpg" alt="">
+                            <div class="board-desc">
+                              <p>
+                                생활코딩!Node.js<br>노드제이에스 프로그래밍 
+                              </p>
+                            </div>
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+              <span class="btn btn_prev">이전</span>
+              <span class="btn btn_next">다음</span>
+              <span class="paginationCount"></span>
+            </div>
+          </div>                 
+        </section>
+        <!-- 섹션03 how-to-->
+        <section class="how-to">
+          <div class="inner section3-inner">
+            <div class="how-to-box">
+              <!-- 텍스트와 원모양의 div 태그를 묶기위한 box -->
+              <div class="how-to-name">
+                <!-- 상단에 있는 텍스트를 묶음 -->
+                <img
+                  src="img/point-color-image.png"
+                  alt=""
+                  class="point-color-image"
+                />
+                <h3>도움말</h3>
+                <p>도서관 이용을 더 풍족하게</p>
+              </div>
+              <div class="how-to-contents">
+                <!-- 하나하나의 원형의 div를 contents라 하고 이를 묶는 div -->
+                <div class="contents first-contents">
+                  <!-- contents들의 순서 first, second... -->
+                  <a href="#none" class="contents-link">
+                    <h3>통합 회원 안내</h3>
+                    <p>자세히 보기 <i class="xi-search"></i></p>
+                  </a>
+                  <div class="color-circle"></div>
+                  <!-- hover시 div안이 point color로 차오르는 애니매이션을 위한 div -->
+                </div>
+                <div class="contents second-contents">
+                  <a href="#none" class="contents-link">
+                    <h3>독서포인트</h3>
+                    <p>자세히 보기 <i class="xi-search"></i></p>
+                  </a>
+                  <div class="color-circle"></div>
+                </div>
+                <div class="contents third-contents">
+                  <a href="#none" class="contents-link">
+                    <h3>책이음 서비스</h3>
+                    <p>자세히 보기 <i class="xi-search"></i></p>
+                  </a>
+                  <div class="color-circle"></div>
+                </div>
+                <div class="contents forth-contents">
+                  <a href="#none" class="contents-link">
+                    <h3>SDI 서비스</h3>
+                    <p>자세히 보기 <i class="xi-search"></i></p>
+                  </a>
+                  <div class="color-circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 섹션04 대전도서관 5곳 소개 nav(daejeon-libary-where) -->
+        <section class="section04">
+          <div class="inner section04-inner">
+            <div
+              class="lib-area"
+              data-image="img/section04-library-img/01-dadeok-ansan-lib.png"
+            >
+              <div class="lib-text-container">
+                <h4>대덕구</h4>
+                <p>안산 도서관</p>
+                <a href="#none">자세히 보기</a>
+              </div>
+            </div>
+            <div
+              class="lib-area"
+              data-image="img/section04-library-img/02-dongu-kao-lib.png"
+            >
+              <div class="lib-text-container">
+                <h4>동구</h4>
+                <p>가오 도서관</p>
+                <a href="#none">자세히 보기</a>
+              </div>
+            </div>
+            <div
+              class="lib-area"
+              data-image="img/section04-library-img/03-seogu-doonsan-lib.png"
+            >
+              <div class="lib-text-container">
+                <h4>서구</h4>
+                <p>둔산 도서관</p>
+                <a href="#none">자세히 보기</a>
+              </div>
+            </div>
+            <div
+              class="lib-area"
+              data-image="img/section04-library-img/04-yuseong-lib.png"
+            >
+              <div class="lib-text-container">
+                <h4>유성구</h4>
+                <p>유성 도서관</p>
+                <a href="#none">자세히 보기</a>
+              </div>
+            </div>
+            <div
+              class="lib-area"
+              data-image="img/section04-library-img/05-joongu-hanbat-lib.png"
+            >
+              <div class="lib-text-container">
+                <h4>중구</h4>
+                <p>한밭 도서관</p>
+                <a href="#none">자세히 보기</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 섹션05 배너(banner) -->
+        <section class="section05">
+          <div class="inner section05-inner">
+              <div class="swiper banner-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.mcst.go.kr/kor/main.jsp"
+                      ><img src="img/section05-banner-img/banner1.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.daejeon.go.kr/hanbatlibrary/index.do"
+                      ><img src="img/section05-banner-img/banner2.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://dsecc.djsch.kr/djsecc/main.do"
+                      ><img src="img/section05-banner-img/banner3.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.donggu.go.kr/dg/lib"
+                      ><img src="img/section05-banner-img/banner4.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.seogu.go.kr/learning/galmalib/index.do"
+                      ><img src="img/section05-banner-img/banner5.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://lib.daedeok.go.kr/daedeoklib/index.do"
+                      ><img src="img/section05-banner-img/banner6.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://lib.yuseong.go.kr/"
+                      ><img src="img/section05-banner-img/banner7.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.nl.go.kr/NL/contents/N30502000000.do"
+                      ><img src="img/section05-banner-img/banner8.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.nl.go.kr/"
+                      ><img src="img/section05-banner-img/banner9.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.nanet.go.kr/main.do"
+                      ><img src="img/section05-banner-img/banner10.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="swiper-slide banner-swiper-slide">
+                    <a href="https://www.dlibrary.go.kr/"
+                      ><img src="img/section05-banner-img/banner11.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next banner-swiper-button-next">
+                <span><i class="xi-angle-right"></i></span>
+              </div>
+              <div class="swiper-button-prev banner-swiper-button-prev">
+                <span><i class="xi-angle-left"></i></span>
+              </div>
+          </div>
+        </section>
+      </main>
+      <!-- 메인끝 -->
+      <!-- 푸터(footer) -->
+      <footer class="footer">
+        <div class="inner footer-inner">
+          <div class="footer-logo">
+            <a href="#none">
+              <img src="img/logo3.svg" alt="" />
+            </a>
+          </div>
+          <div class="policy-and-copy">
+            <div class="policy">
+              <ul class="policies">
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">이메일무단수집거부</a></li>
+              </ul>
+              <div class="copy">
+                <p class="copy-p">
+                  홈페이지 관리: 한밭도서관 &#40;35020&#41;
+                  <span class="copy-span"
+                    >대전광역시 중구 서문로 10&#40;문화동&#41; &#47; 대표번호
+                    042&#41;270-7420</span
+                  ><br />
+                  COPYRIGHT &copy;
+                  <span class="point-color">2013 DAEJEON CYBER LIBRARY.</span>
+                  ALL RIGHTS RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- jquery cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- swipe js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- submenu 이벤트용 js -->
+    <script src="js/header-sub.js"></script>
+    <script src="js/header-res-sub.js"></script>
+    <!-- section01 visual 이미지 변경용 js -->
+    <script src="js/visual-bg.js"></script>
+    <script src="js/section01-notice.js"></script>
+    <script src="js/section02-recommend.js"></script>
+    <script src="js/section03-how-to.js"></script>
+    <script src="js/section04-lib-nav.js"></script>
+    <script src="js/section05-banner.js"></script>
+  </body>
+</html>

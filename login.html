@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원서비스>로그인</title>
+  <!-- jquery cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- xeicon -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"/>
+  <!-- reset css -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer-style.css" />
+  <!-- 공통부분 css -->
+  <link rel="stylesheet" href="css/common-sub/sub-visual.css">
+  <link rel="stylesheet" href="css/subpage-login/sub-lnb.css">
+  <!-- 개별 css -->
+  <link rel="stylesheet" href="css/subpage-login/sub-contents.css">
+  <!-- 반응형 css -->
+  <link rel="stylesheet" href="css/responsive-header.css">
+  <link rel="stylesheet" href="css/responsive-footer.css" />
+  <link rel="stylesheet" href="css/common-sub/responsive-sv.css">
+  <link rel="stylesheet" href="css/subpage-login/responsive-login.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 헤더(header) -->
+    <header>
+        <div class="header-inner">
+          <!-- logo 시작 -->
+          <div class="header-logo">
+            <a href="index.html"><img src="img/header-img/logo3.svg" alt=""></a>
+          </div>
+          <!-- gnb 시작 -->
+          <div class="header-gnb">
+            <!-- gnb메뉴 -->
+            <ul class="menu">
+              <li>
+                <a href="#">자료검색</a>
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">통합검색</a></li>
+                      <li><a href="#">전자책</a></li>
+                      <li><a href="#">전자잡지</a></li>
+                      <li><a href="#">웹DB</a></li>
+                      <li><a href="#">오디오북</a></li>
+                      <li><a href="#">북러닝</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">도서관안내</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">도서관안내센터</a></li>
+                      <li><a href="#">관종별도서관검색</a> </li>
+                      <li><a href="#">대전공공도서관</a></li>
+                      <li><a href="#">대전작은도서관</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="notice.html">열린마당</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="notice.html">공지사항</a></li>
+                      <li><a href="#">통합회원안내</a></li>
+                      <li><a href="#">책이음서비스</a></li>
+                      <li><a href="#">SDI 서비스</a></li>
+                      <li><a href="#">독서포인트</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">도서관소개</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">인사말</a></li>
+                      <li><a href="#">연혁</a></li>
+                      <li><a href="#">연락처</a></li>
+                      <li><a href="#">이용안내</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 서브메뉴 바탕색용 div -->
+            <div class="sub-menu-bg"></div>
+          </div>
+          <!-- icon 시작 -->
+          <div class="header-login">
+            <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+            <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+            <a href="https://lib.nonsan.go.kr/lib/sitemap_11.do" class="desktop-ham" target="_blank"><i class="xi-bars"></i></a>
+            <a href="#" class="hamburger"><i class="xi-bars"></i></a>
+            <!-- 반응형 gnb 시작 -->
+            <div class="responsive-gnb">
+              <div class="res-inner">
+                <div class="res-head">
+                  <div class="res-icon">
+                    <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+                    <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+                    <a href="#" class="ham-close"><i class="xi-close"></i></a>
+                  </div>
+                </div>
+                <div class="res-desc">
+                  <ul>
+                    <li>
+                      <a href="#" class="collapsible">자료검색</a>
+                      <div class="content-sub">
+                        <div class="coi coi1">
+                          <ul class="sub">
+                            <li><a href="#">통합검색</a></li>
+                            <li><a href="#">전자책</a></li>
+                            <li><a href="#">전자잡지</a></li>
+                            <li><a href="#">웹DB</a></li>
+                            <li><a href="#">오디오북</a></li>
+                            <li><a href="#">북러닝</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">도서관안내</a>
+                      <div class="content-sub">
+                        <div class="coi coi2">
+                          <ul class="sub">
+                            <li><a href="#">도서관안내센터</a></li>
+                            <li><a href="#">관종별도서관검색</a> </li>
+                            <li><a href="#">대전공공도서관</a></li>
+                            <li><a href="#">대전작은도서관</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">열린마당</a>
+                      <div class="content-sub">
+                        <div class="coi coi3">
+                          <ul class="sub">
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="#">통합회원안내</a></li>
+                            <li><a href="#">책이음서비스</a></li>
+                            <li><a href="#">SDI 서비스</a></li>
+                            <li><a href="#">독서포인트</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">도서관소개</a>
+                      <div class="content-sub">
+                        <div class="coi coi4">
+                          <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">연락처</a></li>
+                            <li><a href="#">이용안내</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header><!-- main 동일 -->
+
+    <div class="visual">
+      <div class="visual-sub-bg">
+        <p>도서관을 잇다, 대전 사이버 도서관</p>
+      </div>
+      <div class="visual-bar">
+        <div class="inner bar-inner">
+          <ul>
+            <li cl><a href="#"><i class="xi-home"></i></a></li>
+            <li><a href="#"><p>회원서비스</p></a></li>
+            <li><a href="#"><strong>로그인</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- 공통 visual -->
+
+    <div class="contents">
+      <img src="img/sub-page/common/pattern-up.png" alt="" class="contents-background-img-up">
+      <img src="img/sub-page/common/pattern-down.png" alt="" class="contents-background-img-down">
+      <img src="img/sub-page/common/right-line.png" alt="" class="contents-background-img-right">
+      <div class="inner contents-inner">
+        <div class="lnb">
+          <span>회원서비스</span>
+          <ul>
+            <li class="current-page"><a href="login.html">로그인</a></li>
+            <li><a href="sign-up.html">회원가입</a></li>
+            <li><a href="#">아이디찾기</a></li>
+            <li><a href="#">비밀번호찾기</a></li>
+          </ul>
+        </div> <!-- 공통 lnb -->
+        <div class="sub-content">
+          <div class="content-head">
+            <div class="current-login">
+              <span><i class="xi-home"></i> > 회원서비스 > 로그인</span>
+            </div>
+            <div class="login-head-box">
+              <p>로그인</p>
+              <span>대전사이버도서관에 오신걸 환영합니다.</span>
+            </div>
+          </div>
+          <div class="content-main">
+            <div class="left-main">
+              <span>로그인을 하시면 보다 더 많은 정보와 서비스를 이용하실 수 있습니다.</span>
+              <div class="login-box">
+                <input type="email" placeholder="아이디" id="typing-email" onfocus="this.placeholder=''" onblur="this.placeholder='아이디'"/>
+                <input type="password" placeholder="비밀번호" id="typing-pw" onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호'"/>
+                <div class="check">
+                  <input type="checkbox" id="check-box">
+                  <label for="check-box">아이디저장</label>
+                </div>
+                <input type="submit" value="로그인" id="login-submit" class="login-submit" >
+              </div>
+              <div class="search-login">
+                <ul>
+                  <li><a href="#">아이디 찾기</a></li>
+                  <li><a href="#">비밀번호 찾기</a></li>
+                  <li><a href="sign-up.html">회원가입</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="right-main">
+              <div class="cat-img"></div>
+            </div>
+          </div>
+          <div class="content-desc">
+            <p>2012년 이전 가입하신 회원은 <a href="#">대전사이버도서관 통합회원</a>으로 다시 가입하셔야 합니다.</p>
+            <p>자료관리  |  1자료실042-270-7507, (아동)042-270-7513담당자  |  조혜림,최우영</p>
+          </div>
+        </div> <!-- 개별 콘텐츠 -->
+      </div>
+    </div>
+
+    <!-- 푸터(footer) -->
+    <footer class="footer">
+        <div class="inner footer-inner">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img src="img/logo3.svg" alt="" />
+            </a>
+          </div>
+          <div class="policy-and-copy">
+            <div class="policy">
+              <ul class="policies">
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">이메일무단수집거부</a></li>
+              </ul>
+              <div class="copy">
+                <p class="copy-p">
+                  홈페이지 관리: 한밭도서관 &#40;35020&#41;
+                  <span class="copy-span"
+                    >대전광역시 중구 서문로 10&#40;문화동&#41; &#47; 대표번호
+                    042&#41;270-7420</span
+                  ><br />
+                  COPYRIGHT &copy;
+                  <span class="point-color">2013 DAEJEON CYBER LIBRARY.</span>
+                  ALL RIGHTS RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer><!-- main 동일 -->
+  </div>
+
+  <!-- submenu 이벤트용 js -->
+  <script src="js/header-sub.js"></script>
+  <script src="js/header-res-sub.js"></script>
+</body>
+</html>

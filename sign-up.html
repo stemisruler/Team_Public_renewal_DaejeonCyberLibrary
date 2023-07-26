@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원서비스>회원가입</title>
+  <!-- jquery cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- xeicon -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"/>
+  <!-- reset css -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- pretendard cdn -->
+  <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+  <!-- main css -->
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer-style.css" />
+  <!-- 공통부분 css -->
+  <link rel="stylesheet" href="css/common-sub/sub-visual.css">
+  <link rel="stylesheet" href="css/common-sub/sub-lnb.css">
+  <!-- 개별 css -->
+  <link rel="stylesheet" href="css/subpage-sign-up/subpage-sign-up.css">
+  <!-- 반응형 css -->
+  <link rel="stylesheet" href="css/responsive-header.css">
+  <link rel="stylesheet" href="css/common-sub/responsive-sv.css">
+  <link rel="stylesheet" href="css/responsive-footer.css" />
+  <link rel="stylesheet" href="css/subpage-sign-up/responsive-sign-up.css">
+</head>
+<body>
+  <div class="container">
+      <!-- 헤더(header) -->
+    <header>
+        <div class="header-inner">
+          <!-- logo 시작 -->
+          <div class="header-logo">
+            <a href="index.html"><img src="img/header-img/logo3.svg" alt=""></a>
+          </div>
+          <!-- gnb 시작 -->
+          <div class="header-gnb">
+            <!-- gnb메뉴 -->
+            <ul class="menu">
+              <li>
+                <a href="#">자료검색</a>
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">통합검색</a></li>
+                      <li><a href="#">전자책</a></li>
+                      <li><a href="#">전자잡지</a></li>
+                      <li><a href="#">웹DB</a></li>
+                      <li><a href="#">오디오북</a></li>
+                      <li><a href="#">북러닝</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">도서관안내</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">도서관안내센터</a></li>
+                      <li><a href="#">관종별도서관검색</a> </li>
+                      <li><a href="#">대전공공도서관</a></li>
+                      <li><a href="#">대전작은도서관</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="notice.html">열린마당</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="notice.html">공지사항</a></li>
+                      <li><a href="#">통합회원안내</a></li>
+                      <li><a href="#">책이음서비스</a></li>
+                      <li><a href="#">SDI 서비스</a></li>
+                      <li><a href="#">독서포인트</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">도서관소개</a> 
+                <div class="sub-menu">
+                  <div class="sub-menu-inner">
+                    <ul class="sub">
+                      <li><a href="#">인사말</a></li>
+                      <li><a href="#">연혁</a></li>
+                      <li><a href="#">연락처</a></li>
+                      <li><a href="#">이용안내</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 서브메뉴 바탕색용 div -->
+            <div class="sub-menu-bg"></div>
+          </div>
+          <!-- icon 시작 -->
+          <div class="header-login">
+            <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+            <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+            <a href="https://lib.nonsan.go.kr/lib/sitemap_11.do" class="desktop-ham" target="_blank"><i class="xi-bars"></i></a>
+            <a href="#" class="hamburger"><i class="xi-bars"></i></a>
+            <!-- 반응형 gnb 시작 -->
+            <div class="responsive-gnb">
+              <div class="res-inner">
+                <div class="res-head">
+                  <div class="res-icon">
+                    <a href="login.html" class="user-login"><i class="xi-lock-o"></i></a>
+                    <a href="sign-up.html" class="sign-up"><i class="xi-user-plus-o"></i></a>
+                    <a href="#" class="ham-close"><i class="xi-close"></i></a>
+                  </div>
+                </div>
+                <div class="res-desc">
+                  <ul>
+                    <li>
+                      <a href="#" class="collapsible">자료검색</a>
+                      <div class="content-sub">
+                        <div class="coi coi1">
+                          <ul class="sub">
+                            <li><a href="#">통합검색</a></li>
+                            <li><a href="#">전자책</a></li>
+                            <li><a href="#">전자잡지</a></li>
+                            <li><a href="#">웹DB</a></li>
+                            <li><a href="#">오디오북</a></li>
+                            <li><a href="#">북러닝</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">도서관안내</a>
+                      <div class="content-sub">
+                        <div class="coi coi2">
+                          <ul class="sub">
+                            <li><a href="#">도서관안내센터</a></li>
+                            <li><a href="#">관종별도서관검색</a> </li>
+                            <li><a href="#">대전공공도서관</a></li>
+                            <li><a href="#">대전작은도서관</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">열린마당</a>
+                      <div class="content-sub">
+                        <div class="coi coi3">
+                          <ul class="sub">
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="#">통합회원안내</a></li>
+                            <li><a href="#">책이음서비스</a></li>
+                            <li><a href="#">SDI 서비스</a></li>
+                            <li><a href="#">독서포인트</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="collapsible">도서관소개</a>
+                      <div class="content-sub">
+                        <div class="coi coi4">
+                          <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">연락처</a></li>
+                            <li><a href="#">이용안내</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header><!-- main 동일 -->
+
+    <div class="visual">
+      <div class="visual-sub-bg">
+        <p>도서관을 잇다, 대전 사이버 도서관</p>
+      </div>
+      <div class="visual-bar">
+        <div class="inner bar-inner">
+          <ul>
+            <li><a href="#"><i class="xi-home"></i></a></li>
+            <li><a href="#"><p>회원서비스</p></a></li>
+            <li><a href="#"><strong>회원가입</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 공통 visual 끝-->
+
+    <div class="contents">
+      <img src="img/sub-page/common/pattern-up.png" alt="" class="contents-background-img-up">
+    <div class="inner contents-inner">
+        <div class="lnb">
+          <span>회원서비스</span>
+          <ul>
+            <li><a href="login.html">로그인</a></li>
+            <li class="current-page"><a href="#none">회원가입</a></li>
+            <li><a href="#">아이디찾기</a></li>
+            <li><a href="#">비밀번호찾기</a></li>
+          </ul>
+        </div> 
+        <!-- 공통 lnb 끝-->
+
+
+        <div class="sub-content">
+          <div class="content-head">
+            <div class="current-sign-up">
+              <span><a href="index.html"><i class="xi-home"></a></i> > 회원서비스 > 회원가입</span>
+            </div>
+          </div>
+          <div class="sign-up-head-box">
+            <img src="img/point-color-image.png" alt="">
+            <h4>회원가입 안내</h4>
+            <div class="share-and-print">
+              <button><i class="xi-share-alt-o xi-2x"></i></button>
+              <button><i class="xi-print xi-2x"></i></button>
+            </div>
+          </div>
+          <div class="sign-up-login-buttons">
+            <a href="" class="sign-up-button">회원가입</a>
+            <a href="login.html" class="log-in-button">로그인</a>
+          </div>
+          <div class="sign-up-contents">
+                <div class="title-box">
+                  <img src="img/sub-page/sign-up/check.png" alt="">
+                  <h5>회원가입</h5>
+                </div>
+                <ul>
+                  <li>대전시 사이버도서관은 대전시 전체 도서관 회원을
+                    통합회원으로 관리하고 있습니다.</li>
+                  <li>웹 회원 가입 후, 가까운 대전 공공도서관을 방문하여
+                    신분증 확인 후 통합회원이 되실 수 있습니다.
+                     통합회원이 된 후에 전자자료서비스를 이용하실 수
+                     있으며 통합회원 자격은 아래 유의사항에서 확인해주세요.</li>
+                </ul>
+                <div class="process-wrap">
+                  <div class="process-box">
+                      <span class="process-num">01</span>
+                      <span class="process-content">개인정보 수집 및 이용동의</span>
+                  </div>
+                  <span class="process-arrow"></span>
+                  <div class="process-box">
+                      <span class="process-num">02</span>
+                      <span class="process-content">본인인증(휴대폰/아이핀)</span>
+                  </div>
+                  <span class="process-arrow"></span>
+                  <div class="process-box">
+                      <span class="process-num">03</span>
+                      <span class="process-content">가입정보 입력</span>
+                  </div>
+                  <span class="process-arrow"></span>
+                  <div class="process-box">
+                      <span class="process-num">04</span>
+                      <span class="process-content">회원가입확인</span>
+                  </div>
+              </div>
+              
+                <br>
+                <div class="title-box">
+                  <img src="img/sub-page/sign-up/check.png" alt="">
+                  <h5>회원탈퇴</h5>
+                </div>
+                <ul>
+                  <li>통합회원 탈퇴를 원할 경우 "대전사이버도서관"에서
+                    즉시 가능하며 회원정보는 즉시 파기합니다.
+                    <br>(단, 대출 정지기간, 대출기간, 연체 중인 회원 등은 탈퇴 불가능)
+                  </li>
+                </ul>
+                <div class="process-wrap">
+                  <div class="process-box">
+                      <span class="process-num">01</span>
+                      <span class="process-content">내 정보 클릭</span>
+                  </div>
+                  <span class="process-arrow"></span>
+                  <div class="process-box">
+                      <span class="process-num">02</span>
+                      <span class="process-content">본인인증(휴대폰/아이핀)</span>
+                  </div>
+                  <span class="process-arrow"></span>
+                  <div class="process-box">
+                      <span class="process-num">03</span>
+                      <span class="process-content">회원 탈퇴 버튼 클릭</span>
+                  </div>
+                  <span class="process-arrow"></span>
+                  <div class="process-box">
+                      <span class="process-num">04</span>
+                      <span class="process-content">탈퇴 완료</span>
+                  </div>
+              </div>
+              
+                <br>
+                <div class="title-box">
+                  <img src="img/sub-page/sign-up/check.png" alt="">
+                  <h5>유의사항</h5>
+                </div>
+                <ol>
+                  <li class>통합회원 자격 안내
+                    <ul>
+                      <li>대전광역시에 주민등록이 되어 있는 자</li>
+                      <li>주 활동이 대전광역시인 자
+                        (대전소재 직장, 학교 재학, 대전 거주 외국인 등)</li>
+                    </ul>
+                  </li>
+                  <li class>회원 정보 처리 안내
+                    <ul>
+                      <li class="margin-bottom">3년 이내 도서대출 등 이용이 없는 통합회원은 기간 만료 30일
+                        전에 SMS(단문자) 통보하며 만료일 강제탈퇴,
+                        회원정보를 즉시 파기합니다.</li>
+                        <li>자료의 분실, 훼손을 보상하지 않거나,
+                          장기 연체(1년 이상)에 책임을 지지 않는 자는 자격이 정지됩니다.</li>
+                    </ul>
+                  </li>
+                </ol>
+          </div>
+
+        </div>
+        <!-- 개별 콘텐츠 끝-->
+      </div>
+    </div>
+
+    <!-- 푸터(footer) -->
+    <footer class="footer">
+        <div class="inner footer-inner">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img src="img/logo3.svg" alt="" />
+            </a>
+          </div>
+          <div class="policy-and-copy">
+            <div class="policy">
+              <ul class="policies">
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">이메일무단수집거부</a></li>
+              </ul>
+              <div class="copy">
+                <p class="copy-p">
+                  홈페이지 관리: 한밭도서관 &#40;35020&#41;
+                  <span class="copy-span"
+                    >대전광역시 중구 서문로 10&#40;문화동&#41; &#47; 대표번호
+                    042&#41;270-7420</span
+                  ><br />
+                  COPYRIGHT &copy;
+                  <span class="point-color">2013 DAEJEON CYBER LIBRARY.</span>
+                  ALL RIGHTS RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer><!-- main 동일 -->
+  </div>
+
+  <!-- submenu 이벤트용 js -->
+  <script src="js/header-sub.js"></script>
+  <script src="js/header-res-sub.js"></script>
+</body>
+</html>
