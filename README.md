@@ -2,14 +2,6 @@
 
 https://stemisruler.github.io/Team_Public_renewal_DaejeonCyberLibrary/
 
-<div align='center'>
-동방 리뉴얼 프로젝트
-  
-https://stemisruler.github.io/Personal_Company_renewal_Dongbang/
-
-</div>
- <br>
- <br>
 
 <H2 align='center'> 🧶 Tech Stacks 📚</H2>
 
@@ -20,10 +12,6 @@ https://stemisruler.github.io/Personal_Company_renewal_Dongbang/
  <div align='center'>
  
 </div>
-
- 
-<h1>프로젝트 제목</h1>
-<b>동방 리뉴얼 프로젝트</b>
 
 
 <h1>리뉴얼 기획 의도</h1>
